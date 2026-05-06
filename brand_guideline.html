@@ -1,0 +1,3362 @@
+<!doctype html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>EDMTECH — Diretrizes de Marca</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            :root {
+                --red: #e74f3d;
+                --orange: #ee6a30;
+                --teal: #34bee9;
+                --teal-dark: #197799;
+                --teal-deep: #014354;
+                --teal-light: #8fe0ff;
+                --white: #ffffff;
+                --gray-100: #f8f9fa;
+                --gray-200: #e9ecef;
+                --gray-300: #9d9d9d;
+                --gray-400: #4d4d4d;
+                --gray-500: #171717;
+                --black: #0b0e15;
+                --navy: #0b0e15;
+                --navy-light: #00263e;
+                --bg-page: #fafbfc;
+                --bg-card: #ffffff;
+                --text-main: #1a1d23;
+                --text-muted: #5f6977;
+                --border: #e5e7eb;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                font-family: "Sora", sans-serif;
+                background: var(--bg-page);
+                color: var(--text-main);
+                line-height: 1.6;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            /* Navigation */
+            .nav {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+                background: rgba(255, 255, 255, 0.92);
+                backdrop-filter: blur(12px);
+                border-bottom: 1px solid var(--border);
+            }
+            .nav-inner {
+                max-width: 1100px;
+                margin: 0 auto;
+                padding: 0 32px;
+                height: 56px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .nav-logo {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-weight: 600;
+                color: var(--text-main);
+                text-decoration: none;
+                font-size: 15px;
+            }
+            .nav-logo svg {
+                height: 24px;
+                width: auto;
+            }
+            .nav-links {
+                display: flex;
+                gap: 22px;
+                list-style: none;
+            }
+            .nav-links a {
+                color: var(--text-muted);
+                text-decoration: none;
+                font-size: 12px;
+                font-weight: 500;
+                letter-spacing: 0.02em;
+                text-transform: uppercase;
+                transition: color 0.2s;
+                white-space: nowrap;
+            }
+            .nav-links a:hover {
+                color: var(--text-main);
+            }
+            .nav-links a.active {
+                color: var(--red);
+                font-weight: 600;
+            }
+
+            /* Hero compacto */
+            .hero {
+                padding: 100px 32px 40px;
+                max-width: 1100px;
+                margin: 0 auto;
+            }
+            .hero h1 {
+                font-size: 36px;
+                font-weight: 700;
+                color: var(--text-main);
+                line-height: 1.2;
+                margin-bottom: 8px;
+                letter-spacing: -0.01em;
+            }
+            .hero-sub {
+                font-size: 15px;
+                color: var(--text-muted);
+                margin-bottom: 24px;
+            }
+
+            /* Intro */
+            .intro {
+                max-width: 1100px;
+                margin: 0 auto;
+                padding: 0 32px 48px;
+            }
+            .intro-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+                align-items: center;
+                background: var(--bg-card);
+                border-radius: 16px;
+                padding: 40px;
+                border: 1px solid var(--border);
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+            }
+            .intro-text h2 {
+                font-size: 13px;
+                font-weight: 600;
+                color: var(--red);
+                text-transform: uppercase;
+                letter-spacing: 0.08em;
+                margin-bottom: 16px;
+            }
+            .intro-text p {
+                font-size: 15px;
+                color: var(--text-muted);
+                line-height: 1.7;
+                margin-bottom: 12px;
+            }
+            .intro-visual {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            @media (max-width: 768px) {
+                .intro-grid {
+                    grid-template-columns: 1fr;
+                    padding: 28px 20px;
+                }
+            }
+
+            /* Sections */
+            .section {
+                max-width: 1100px;
+                margin: 0 auto;
+                padding: 72px 32px;
+            }
+            .section-header {
+                margin-bottom: 40px;
+                position: relative;
+            }
+            .section-header::before {
+                content: attr(data-num);
+                position: absolute;
+                top: -16px;
+                left: -8px;
+                font-size: 96px;
+                font-weight: 700;
+                color: var(--red);
+                opacity: 0.06;
+                line-height: 1;
+                pointer-events: none;
+                font-family: "Sora", sans-serif;
+            }
+            .section-label {
+                font-size: 12px;
+                font-weight: 600;
+                color: var(--red);
+                text-transform: uppercase;
+                letter-spacing: 0.12em;
+                margin-bottom: 10px;
+            }
+            .section h2 {
+                font-size: 28px;
+                font-weight: 700;
+                color: var(--text-main);
+                margin-bottom: 8px;
+                letter-spacing: -0.01em;
+            }
+            .section-header p {
+                color: var(--text-muted);
+                font-size: 14px;
+                max-width: 600px;
+                line-height: 1.6;
+            }
+
+            /* Colors Grid */
+            .colors-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+                gap: 14px;
+            }
+            .color-card {
+                background: var(--bg-card);
+                border-radius: 10px;
+                overflow: hidden;
+                border: 1px solid var(--border);
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+                transition:
+                    transform 0.2s,
+                    border-color 0.2s;
+                cursor: pointer;
+            }
+            .color-card:hover {
+                transform: translateY(-2px);
+                border-color: var(--border);
+            }
+            .color-swatch {
+                height: 120px;
+                position: relative;
+                display: flex;
+                align-items: flex-end;
+                padding: 12px;
+                cursor: pointer;
+            }
+            .swatch-content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                gap: 8px;
+            }
+            .swatch-code {
+                font-family: "SF Mono", monospace;
+                font-size: 14px;
+                font-weight: 600;
+                letter-spacing: 0.02em;
+                color: var(--white);
+                text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+            }
+            .color-swatch.swatch-light .swatch-code {
+                color: var(--text-main);
+                text-shadow: none;
+            }
+            .swatch-copy {
+                width: 28px;
+                height: 28px;
+                border-radius: 6px;
+                background: rgba(255, 255, 255, 0.2);
+                backdrop-filter: blur(4px);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 0;
+                transition: opacity 0.2s, background 0.2s;
+                flex-shrink: 0;
+            }
+            .color-swatch.swatch-light .swatch-copy {
+                background: rgba(0, 0, 0, 0.08);
+            }
+            .color-card:hover .swatch-copy {
+                opacity: 1;
+            }
+            .swatch-copy:hover {
+                background: rgba(255, 255, 255, 0.35) !important;
+            }
+            .color-swatch.swatch-light .swatch-copy:hover {
+                background: rgba(0, 0, 0, 0.15) !important;
+            }
+            .color-info {
+                padding: 12px 14px;
+            }
+            .color-name {
+                font-size: 14px;
+                font-weight: 600;
+                color: var(--text-main);
+                margin-bottom: 2px;
+            }
+            .color-code {
+                font-family: "SF Mono", monospace;
+                font-size: 13px;
+                color: var(--text-muted);
+                letter-spacing: 0.02em;
+            }
+            .color-code.copied {
+                color: var(--teal);
+            }
+
+            /* Logo Section */
+            .logo-showcase {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 16px;
+            }
+            @media (max-width: 768px) {
+                .logo-showcase {
+                    grid-template-columns: 1fr;
+                }
+            }
+            .logo-card.blue-bg {
+                background: #00263e;
+            }
+            .logo-card.blue-bg .logo-card-label {
+                color: var(--white);
+            }
+            .logo-card {
+                background: var(--bg-card);
+                border-radius: 10px;
+                padding: 24px;
+                border: 1px solid var(--border);
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 14px;
+            }
+            .logo-card.light {
+                background: var(--white);
+            }
+            .logo-card.black-bg {
+                background: #111;
+            }
+            .logo-preview {
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                min-height: 64px;
+            }
+            .logo-card svg {
+                max-width: 100%;
+                height: auto;
+                max-height: 48px;
+            }
+            .logo-card-label {
+                font-size: 13px;
+                font-weight: 500;
+                color: var(--text-muted);
+                text-align: left;
+            }
+            .logo-card.light .logo-card-label {
+                color: var(--text-muted);
+            }
+            .logo-card-usage {
+                font-size: 12px;
+                color: var(--text-muted);
+                text-align: left;
+                line-height: 1.5;
+                margin-top: -8px;
+            }
+            .logo-card.blue-bg .logo-card-usage,
+            .logo-card.black-bg .logo-card-usage {
+                color: rgba(255, 255, 255, 0.7);
+            }
+            .logo-downloads {
+                display: flex;
+                gap: 6px;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+            }
+            .link-small {
+                font-size: 12px;
+                font-weight: 500;
+                color: var(--white);
+                text-decoration: none;
+                padding: 4px 10px;
+                border-radius: 4px;
+                background: var(--teal);
+                border: none;
+                transition: all 0.2s;
+            }
+            .link-small:hover {
+                background: var(--teal-dark);
+            }
+
+            /* Color category labels */
+            .color-category {
+                margin-bottom: 28px;
+            }
+            .color-category-label {
+                font-size: 12px;
+                font-weight: 600;
+                color: var(--text-muted);
+                text-transform: uppercase;
+                letter-spacing: 0.08em;
+                margin-bottom: 12px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+            .color-category-label::before {
+                content: "";
+                display: block;
+                                        overflow: visible;
+                width: 16px;
+                height: 2px;
+                border-radius: 1px;
+            }
+            .color-category-label.primary::before {
+                background: var(--red);
+            }
+            .color-category-label.secondary::before {
+                background: var(--teal);
+            }
+            .color-category-label.neutrals::before {
+                background: var(--gray-400);
+            }
+            .color-usage {
+                font-size: 12px;
+                color: var(--text-muted);
+                margin-top: 4px;
+                line-height: 1.4;
+            }
+
+            /* Logo Usage Rules */
+            .logo-rules {
+                margin-top: 40px;
+            }
+            .rules-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 16px;
+                margin-top: 20px;
+            }
+            .rule-card {
+                background: var(--bg-card);
+                border-radius: 10px;
+                padding: 22px;
+                border: 1px solid var(--border);
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+            }
+            .rule-card h3 {
+                font-size: 14px;
+                font-weight: 600;
+                color: var(--text-main);
+                margin-bottom: 14px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+            .icon {
+                width: 26px;
+                height: 26px;
+                border-radius: 50%;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 15px;
+                flex-shrink: 0;
+                line-height: 1;
+            }
+            .icon-good {
+                background: rgba(52, 190, 233, 0.15);
+                color: var(--teal);
+            }
+            .icon-bad {
+                background: rgba(231, 79, 61, 0.15);
+                color: var(--red);
+            }
+            .icon-info {
+                background: rgba(157, 157, 157, 0.15);
+                color: var(--gray-300);
+            }
+
+            .clear-space-demo {
+                background: var(--gray-100);
+                border-radius: 8px;
+                padding: 24px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                margin-bottom: 16px;
+            }
+            .clear-space-box {
+                position: relative;
+                padding: 25px;
+                border: 1px dashed var(--teal-dark);
+                border-radius: 6px;
+                background: rgba(52, 190, 233, 0.08);
+            }
+            .clear-space-caption {
+                margin-top: 10px;
+                font-size: 12px;
+                font-weight: 500;
+                color: var(--teal-dark);
+                text-align: center;
+                letter-spacing: 0.02em;
+            }
+
+            .compat-table {
+                width: 100%;
+                border-collapse: collapse;
+                font-size: 13px;
+            }
+            .compat-table th,
+            .compat-table td {
+                text-align: left;
+                padding: 8px 10px;
+                border-bottom: 1px solid var(--border);
+                color: var(--text-muted);
+            }
+            .compat-table th {
+                color: var(--text-main);
+                font-weight: 600;
+                font-size: 12px;
+                text-transform: uppercase;
+                letter-spacing: 0.04em;
+            }
+            .compat-table td strong {
+                color: var(--text-main);
+                font-weight: 500;
+            }
+            .badge {
+                display: inline-block;
+                font-size: 12px;
+                font-weight: 600;
+                padding: 2px 8px;
+                border-radius: 4px;
+                text-transform: uppercase;
+                letter-spacing: 0.04em;
+            }
+            .badge-ok {
+                background: rgba(52, 190, 233, 0.15);
+                color: var(--teal);
+            }
+            .badge-warn {
+                background: rgba(238, 106, 48, 0.15);
+                color: var(--orange);
+            }
+            .badge-mono {
+                background: rgba(157, 157, 157, 0.15);
+                color: var(--gray-300);
+            }
+
+            .do-dont-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+            .do-dont-item {
+                background: var(--bg-card);
+                border-radius: 8px;
+                padding: 14px;
+                border: 1px solid var(--border);
+            }
+            .do-dont-item.do {
+                border-left: 2px solid var(--teal);
+            }
+            .do-dont-item.dont {
+                border-left: 2px solid var(--red);
+            }
+            .do-dont-title {
+                font-size: 12px;
+                font-weight: 600;
+                margin-bottom: 4px;
+                text-transform: uppercase;
+                letter-spacing: 0.04em;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+            }
+            .do-dont-title.do {
+                color: var(--teal);
+            }
+            .do-dont-title.dont {
+                color: var(--red);
+            }
+            .do-dont-desc {
+                font-size: 13px;
+                color: var(--text-muted);
+                line-height: 1.5;
+            }
+
+            /* Voice & Tone */
+            .voice-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: 14px;
+                margin-bottom: 32px;
+            }
+            .voice-card {
+                background: var(--bg-card);
+                border-radius: 10px;
+                padding: 20px;
+                border: 1px solid var(--border);
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+            }
+            .voice-card h4 {
+                font-size: 14px;
+                font-weight: 600;
+                color: var(--text-main);
+                margin-bottom: 8px;
+            }
+            .voice-card p {
+                font-size: 13px;
+                color: var(--text-muted);
+                line-height: 1.6;
+            }
+            .tone-table-wrap {
+                overflow-x: auto;
+                margin-bottom: 32px;
+            }
+            .tone-table {
+                width: 100%;
+                border-collapse: collapse;
+                font-size: 13px;
+                min-width: 600px;
+            }
+            .tone-table th,
+            .tone-table td {
+                text-align: left;
+                padding: 12px 14px;
+                border-bottom: 1px solid var(--border);
+            }
+            .tone-table th {
+                color: var(--text-main);
+                font-weight: 600;
+                font-size: 12px;
+                text-transform: uppercase;
+                letter-spacing: 0.04em;
+                background: var(--gray-100);
+            }
+            .tone-table td {
+                color: var(--text-muted);
+            }
+            .tone-table td strong {
+                color: var(--text-main);
+                font-weight: 500;
+            }
+
+            .never-say-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 14px;
+            }
+            .never-say-card {
+                background: var(--bg-card);
+                border-radius: 10px;
+                padding: 20px;
+                border: 1px solid var(--border);
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+            }
+            .never-say-card h4 {
+                font-size: 13px;
+                font-weight: 600;
+                color: var(--red);
+                text-transform: uppercase;
+                letter-spacing: 0.04em;
+                margin-bottom: 12px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+            .never-say-list {
+                list-style: none;
+                margin-bottom: 12px;
+            }
+            .never-say-list li {
+                font-size: 13px;
+                color: var(--text-muted);
+                padding: 4px 0;
+                display: flex;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            .never-say-alt {
+                font-size: 13px;
+                color: var(--teal);
+                padding-top: 8px;
+                border-top: 1px solid var(--border);
+                line-height: 1.6;
+            }
+            .checklist {
+                background: var(--bg-card);
+                border-radius: 10px;
+                padding: 24px;
+                border: 1px solid var(--border);
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+            }
+            .checklist h3 {
+                font-size: 14px;
+                font-weight: 600;
+                color: var(--text-main);
+                margin-bottom: 14px;
+            }
+            .checklist ul {
+                list-style: none;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+                gap: 8px;
+            }
+            .checklist li {
+                font-size: 13px;
+                color: var(--text-muted);
+                display: flex;
+                align-items: flex-start;
+                gap: 8px;
+                line-height: 1.5;
+            }
+            .checklist li::before {
+                content: "";
+                width: 14px;
+                height: 14px;
+                border-radius: 3px;
+                border: 1px solid var(--border);
+                flex-shrink: 0;
+                margin-top: 2px;
+            }
+
+            /* Photography */
+            .photo-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+                gap: 16px;
+                margin-bottom: 24px;
+            }
+            .photo-card {
+                background: var(--bg-card);
+                border-radius: 10px;
+                padding: 22px;
+                border: 1px solid var(--border);
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+            }
+            .photo-card h4 {
+                font-size: 14px;
+                font-weight: 600;
+                color: var(--text-main);
+                margin-bottom: 10px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+            .photo-card p,
+            .photo-card li {
+                font-size: 13px;
+                color: var(--text-muted);
+                line-height: 1.6;
+            }
+            .photo-card ul {
+                list-style: none;
+                margin-top: 8px;
+            }
+            .photo-card li {
+                padding: 3px 0;
+                display: flex;
+                align-items: flex-start;
+                gap: 8px;
+            }
+            .photo-card li::before {
+                content: "—";
+                color: var(--teal);
+                font-weight: 600;
+            }
+            .photo-dont li::before {
+                content: "—";
+                color: var(--red);
+            }
+
+            .grade-specs {
+                background: var(--gray-100);
+                border-radius: 8px;
+                padding: 16px;
+                margin-top: 16px;
+                font-family: "SF Mono", monospace;
+                font-size: 12px;
+                color: var(--text-muted);
+                line-height: 1.7;
+            }
+            .grade-specs strong {
+                color: var(--text-main);
+            }
+
+            /* Typography */
+            .type-showcase {
+                background: var(--bg-card);
+                border-radius: 10px;
+                padding: 28px;
+                border: 1px solid var(--border);
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+            }
+            .type-row {
+                display: flex;
+                align-items: baseline;
+                justify-content: space-between;
+                padding: 12px 0;
+                border-bottom: 1px solid var(--border);
+                gap: 16px;
+            }
+            .type-row:last-child {
+                border-bottom: none;
+            }
+            .type-sample {
+                font-size: 20px;
+                color: var(--text-main);
+            }
+            .type-meta {
+                font-size: 12px;
+                color: var(--text-muted);
+                text-align: right;
+                flex-shrink: 0;
+            }
+            .type-meta strong {
+                color: var(--text-main);
+                font-weight: 600;
+            }
+
+            /* Templates */
+            .templates-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                gap: 16px;
+            }
+            .template-card {
+                background: var(--bg-card);
+                border-radius: 10px;
+                padding: 22px;
+                border: 1px solid var(--border);
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+                transition:
+                    transform 0.2s,
+                    border-color 0.2s;
+            }
+            .template-card:hover {
+                transform: translateY(-2px);
+                border-color: var(--border);
+            }
+            .template-icon {
+                width: 36px;
+                height: 36px;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 16px;
+                margin-bottom: 12px;
+            }
+            .template-card h3 {
+                font-size: 14px;
+                font-weight: 600;
+                color: var(--text-main);
+                margin-bottom: 4px;
+            }
+            .template-card p {
+                font-size: 13px;
+                color: var(--text-muted);
+                margin-bottom: 14px;
+                line-height: 1.5;
+            }
+            .template-link {
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                font-size: 13px;
+                font-weight: 500;
+                color: var(--white);
+                text-decoration: none;
+                padding: 7px 14px;
+                border-radius: 6px;
+                background: var(--teal);
+                border: none;
+                transition: all 0.2s;
+            }
+            .template-link:hover {
+                background: var(--teal-dark);
+            }
+
+            /* Template Categories (Documentos da Marca) */
+            .template-category {
+                margin-bottom: 28px;
+            }
+            .template-category-header {
+                display: flex;
+                align-items: center;
+                gap: 14px;
+                margin-bottom: 16px;
+            }
+            .template-category-icon {
+                width: 40px;
+                height: 40px;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+            }
+            .template-category-header h3 {
+                font-size: 15px;
+                font-weight: 600;
+                color: var(--text-main);
+                margin-bottom: 2px;
+            }
+            .template-category-header p {
+                font-size: 13px;
+                color: var(--text-muted);
+                line-height: 1.5;
+            }
+            .templates-subgrid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: 14px;
+                padding-left: 54px;
+            }
+            .template-subcard {
+                background: var(--bg-card);
+                border-radius: 10px;
+                padding: 20px;
+                border: 1px solid var(--border);
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+                transition:
+                    transform 0.2s,
+                    border-color 0.2s;
+            }
+            .template-subcard:hover {
+                transform: translateY(-2px);
+                border-color: var(--border);
+            }
+            .template-subcard h4 {
+                font-size: 14px;
+                font-weight: 600;
+                color: var(--text-main);
+                margin-bottom: 6px;
+            }
+            .template-subcard p {
+                font-size: 13px;
+                color: var(--text-muted);
+                margin-bottom: 14px;
+                line-height: 1.5;
+            }
+
+            /* Toast */
+            .toast {
+                position: fixed;
+                bottom: 28px;
+                left: 50%;
+                transform: translateX(-50%) translateY(80px);
+                background: var(--text-main);
+                color: var(--white);
+                padding: 10px 20px;
+                border-radius: 8px;
+                font-size: 13px;
+                font-weight: 500;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+                opacity: 0;
+                transition: all 0.3s ease;
+                z-index: 2000;
+                pointer-events: none;
+            }
+            .toast.show {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+
+            /* Footer */
+            .footer {
+                border-top: 1px solid var(--border);
+                padding: 32px;
+                text-align: center;
+                color: var(--text-muted);
+                font-size: 13px;
+            }
+
+            @media (max-width: 768px) {
+                .nav-links {
+                    display: none;
+                }
+                .hero {
+                    padding-top: 80px;
+                    padding-bottom: 24px;
+                }
+                .section {
+                    padding: 40px 20px;
+                }
+                .intro {
+                    padding: 0 20px 36px;
+                }
+                .colors-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+                .type-row {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 4px;
+                }
+                .type-meta {
+                    text-align: left;
+                }
+                .do-dont-grid {
+                    grid-template-columns: 1fr;
+                }
+                .rules-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Toast -->
+        <div class="toast" id="toast">Copiado</div>
+
+        <!-- Nav -->
+        <nav class="nav">
+            <div class="nav-inner">
+                <a href="#" class="nav-logo">
+                    <svg
+                        viewBox="0 0 300 72"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        style="height: 24px; width: auto"
+                    >
+                        <path
+                            d="M32.8,4.6C32.8,4.6,32.8,4.6,32.8,4.6c-0.1,0-0.1-0.1-0.2-0.1c0,0,0,0,0,0c-0.1,0-0.1,0-0.2-0.1c0,0,0,0-0.1,0 c-0.1,0-0.1,0-0.2,0c0,0,0,0-0.1,0c-0.1,0-0.1,0-0.2,0c-0.1,0-0.1,0-0.2,0c0,0,0,0-0.1,0c-0.1,0-0.1,0-0.2,0c0,0,0,0-0.1,0 c-0.1,0-0.1,0-0.2,0.1c0,0,0,0,0,0c-0.1,0-0.1,0.1-0.2,0.1c0,0,0,0,0,0l-25.9,15c-0.5,0.3-0.9,0.9-0.9,1.5V51c0,0,0,0,0,0 c0,0.1,0,0.1,0,0.2c0,0,0,0,0,0c0,0.1,0,0.1,0,0.2c0,0,0,0,0,0.1c0,0.1,0,0.1,0.1,0.2c0,0,0,0,0,0c0,0.1,0.1,0.1,0.1,0.2 c0,0,0,0,0,0c0,0.1,0.1,0.1,0.1,0.2c0,0,0.1,0.1,0.1,0.1c0,0,0,0.1,0.1,0.1c0,0,0.1,0.1,0.1,0.1c0,0,0,0,0.1,0c0,0,0.1,0.1,0.1,0.1 c0,0,0,0,0,0l0,0c0,0,0,0,0,0l25.9,15c0.3,0.2,0.6,0.2,0.9,0.2c0.3,0,0.6-0.1,0.9-0.2l25.9-15c0,0,0,0,0,0l0,0c0,0,0,0,0,0 c0,0,0.1-0.1,0.1-0.1c0,0,0,0,0.1,0c0,0,0.1-0.1,0.1-0.1c0,0,0,0,0.1-0.1c0,0,0.1-0.1,0.1-0.1c0-0.1,0.1-0.1,0.1-0.2c0,0,0,0,0,0 c0-0.1,0.1-0.1,0.1-0.2c0,0,0,0,0,0c0-0.1,0-0.1,0.1-0.2c0,0,0,0,0,0c0-0.1,0-0.1,0-0.2c0,0,0,0,0,0c0-0.1,0-0.1,0-0.2c0,0,0,0,0,0 V21.1c0-0.6-0.3-1.2-0.9-1.5L32.8,4.6z M33.7,25.5l10.7,18.6l-10.7,6.2V25.5z M7.7,22.1L30.1,9.2v9.2l-14.4,25L7.7,48V22.1z M30.1,25.5v24.8l-10.7-6.2L30.1,25.5z M31.9,64L9.5,51l7.5-4.3l14,8.1c0,0,0,0,0,0c0.1,0,0.1,0.1,0.2,0.1c0,0,0,0,0,0 c0.1,0,0.1,0,0.2,0.1c0,0,0,0,0.1,0c0.1,0,0.1,0,0.2,0c0,0,0,0,0.1,0c0.1,0,0.1,0,0.2,0c0.1,0,0.1,0,0.2,0c0,0,0,0,0.1,0 c0.1,0,0.1,0,0.2,0c0,0,0,0,0.1,0c0.1,0,0.1,0,0.2-0.1c0,0,0,0,0,0c0.1,0,0.1-0.1,0.2-0.1c0,0,0,0,0,0l14-8.1l7.5,4.3L31.9,64z M56,48l-7.9-4.6l-14.4-25V9.2L56,22.1V48z"
+                            fill="#E74F3D"
+                        />
+                        <path
+                            fill="#E74F3D"
+                            d="M190.5,23.4h13.6v4h-13.6v13.3c0,0.2,0.2,0.6,0.4,0.7l5,3.1c0.4,0.3,1.3,0.5,1.8,0.5h6.4v4h-6.4 c-1.2,0-2.9-0.5-3.9-1.1l-5-3.1c-1.3-0.8-2.3-2.5-2.3-4.1V19.4l4-1.2V23.4z M234.5,26.4l-9.2-3.1c-1.2-0.4-3-0.4-4.2,0l-9.2,3.1 c-1.6,0.5-2.8,2.2-2.8,3.9v10.5c0,1.5,0.9,3.2,2.2,4.1l4.4,2.9c1,0.7,2.7,1.2,3.9,1.2h15.8v-4h-15.8c-0.5,0-1.4-0.3-1.8-0.5 l-4.4-2.9c-0.2-0.1-0.4-0.5-0.4-0.7l0-10.5c0-0.1,0.1-0.2,0.1-0.2l9.2-3.1c0.4-0.1,1.3-0.1,1.7,0l9.2,3.1c0.1,0,0.1,0.1,0.1,0.2 v4.6h-14.9v4h15.4c2,0,3.6-1.6,3.6-3.5v-5C237.4,28.6,236.1,26.9,234.5,26.4z M97.4,26.4l-9.2-3.1c-1.2-0.4-3-0.4-4.2,0l-9.2,3.1 c-1.6,0.5-2.8,2.2-2.8,3.9v10.5c0,1.5,0.9,3.2,2.2,4.1l4.4,2.9c1,0.7,2.7,1.2,3.9,1.2h15.8v-4H82.4c-0.5,0-1.4-0.3-1.8-0.5 l-4.4-2.9c-0.2-0.1-0.4-0.5-0.4-0.7l0-10.5c0-0.1,0.1-0.2,0.1-0.2l9.2-3.1c0.4-0.1,1.3-0.1,1.7,0l9.2,3.1c0.1,0,0.1,0.1,0.1,0.2 v4.6H81.3v4h15.4c2,0,3.6-1.6,3.6-3.5v-5C100.2,28.6,99,26.9,97.4,26.4z M134,18.8v26.7c0,2-1.6,3.5-3.5,3.5h-14.7 c-1.3,0-3-0.6-4-1.4l-4.1-3.1c-1.2-0.9-2-2.6-2-4.1v-9.7c0-1.7,1.2-3.4,2.8-4l9.3-3.5c1.2-0.5,3-0.5,4.3-0.1l8.1,2.7v-6L134,18.8z M130,30.3l-9.3-3.2c-0.2-0.1-0.4-0.1-0.7-0.1c-0.3,0-0.7,0-0.9,0.1l-9.3,3.5c0,0-0.1,0.2-0.1,0.2l0,9.6c0,0.2,0.3,0.8,0.4,0.9 l4.1,3.1c0.3,0.3,1.1,0.5,1.6,0.5H130V30.3z M177.7,26.7l-4.1-2.8c-1.2-0.8-3.1-1.1-4.5-0.6l-9.2,3.3l-3.7-2.7 c-1.2-0.9-3.1-1.2-4.6-0.7l-7.6,2.8h-4v22.8h4V30.4l9-3.2c0.2-0.1,0.7,0,0.8,0.1l3.7,2.7c0.2,0.1,0.4,0.6,0.4,0.9v18.1h4V30.8 c0-0.2-0.1-0.4-0.1-0.6l8.6-3.1c0.2-0.1,0.7,0,0.9,0.1l4.1,2.8c0.2,0.1,0.4,0.6,0.4,0.8v18.1h4V30.8 C179.9,29.3,179,27.6,177.7,26.7z M257.1,45.2c-0.4,0.1-1.3,0.1-1.7,0l-8.4-3c-0.1,0-0.2-0.2-0.2-0.2l0-11.4c0-0.1,0.1-0.2,0.1-0.2 l8.4-3c0.3-0.1,1.1-0.1,1.5,0l7.1,2.9c0.1,0,0.2,0.2,0.2,0.3v6.4l4-1.2v-5.2c0-1.7-1.1-3.4-2.7-4l-7.1-2.9 c-1.2-0.5-3.1-0.5-4.3-0.1l-8.4,3c-1.6,0.6-2.8,2.3-2.8,4v11.4c0,1.7,1.2,3.4,2.8,4l8.4,3c0.7,0.2,1.5,0.4,2.3,0.4 c0.7,0,1.3-0.1,1.9-0.3l9.5-2.9v-4.2L257.1,45.2z M294.2,26.7l-4.8-2.9c-1.3-0.8-3.2-0.9-4.5-0.4l-6.5,2.5v-7l-4,1.2v28.8h4V30.2 l8-3c0.2-0.1,0.8,0,1,0.1l4.8,2.9c0.1,0.1,0.4,0.5,0.4,0.7v18.1h4V30.8C296.5,29.3,295.6,27.5,294.2,26.7z"
+                            fill="#E5E7EB"
+                        />
+                    </svg>
+                    Diretrizes de Marca
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#logotipo">Logótipo</a></li>
+                    <li><a href="#modelos">Modelos</a></li>
+                    <li><a href="#cores">Cores</a></li>
+                    <li><a href="#tipografia">Tipografia</a></li>
+                    <li><a href="#videos">Vídeos</a></li>
+                    <li><a href="#voz">Voz</a></li>
+                    <li><a href="#fotografia">Fotografia</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Hero compacto -->
+        <section class="hero">
+            <h1>Diretrizes de Marca EDMTECH</h1>
+            <p class="hero-sub">
+                Documento de referência interna para uso da identidade visual em
+                todos os materiais de comunicação.
+            </p>
+        </section>
+
+        <!-- Introdução -->
+        <section class="intro">
+            <div class="intro-grid">
+                <div class="intro-text">
+                    <h2>Sobre esta página</h2>
+                    <p>
+                        Esta página reúne os elementos essenciais da identidade
+                        visual da EDMTECH — códigos de cor, ficheiros de
+                        logótipo, regras tipográficas e modelos de documentos.
+                    </p>
+                    <p>
+                        É um documento de referência interna para garantir
+                        consistência em todos os materiais de comunicação, do
+                        site às apresentações, propostas e documentação técnica.
+                    </p>
+                    <p
+                        style="
+                            margin-top: 12px;
+                            font-size: 13px;
+                            color: var(--text-muted);
+                        "
+                    >
+                        Atualizado: Abril 2026
+                    </p>
+                </div>
+                <div class="intro-visual">
+                    <svg
+                        viewBox="0 0 320 220"
+                        xmlns="http://www.w3.org/2000/svg"
+                        style="width: 100%; height: auto"
+                    >
+                        <rect
+                            x="20"
+                            y="20"
+                            width="120"
+                            height="80"
+                            rx="8"
+                            fill="#FFFFFF"
+                            stroke="#E5E7EB"
+                            stroke-width="1"
+                        />
+                        <rect
+                            x="30"
+                            y="35"
+                            width="60"
+                            height="6"
+                            rx="3"
+                            fill="#E74F3D"
+                        />
+                        <rect
+                            x="30"
+                            y="48"
+                            width="80"
+                            height="4"
+                            rx="2"
+                            fill="#E5E7EB"
+                        />
+                        <rect
+                            x="30"
+                            y="58"
+                            width="50"
+                            height="4"
+                            rx="2"
+                            fill="#E5E7EB"
+                        />
+                        <rect
+                            x="30"
+                            y="72"
+                            width="40"
+                            height="16"
+                            rx="4"
+                            fill="#34BEE9"
+                            opacity="0.15"
+                        />
+                        <rect
+                            x="75"
+                            y="72"
+                            width="40"
+                            height="16"
+                            rx="4"
+                            fill="#E74F3D"
+                            opacity="0.15"
+                        />
+                        <rect
+                            x="160"
+                            y="20"
+                            width="140"
+                            height="180"
+                            rx="8"
+                            fill="#FFFFFF"
+                            stroke="#E5E7EB"
+                            stroke-width="1"
+                        />
+                        <rect
+                            x="175"
+                            y="38"
+                            width="50"
+                            height="6"
+                            rx="3"
+                            fill="#171717"
+                        />
+                        <rect
+                            x="175"
+                            y="52"
+                            width="90"
+                            height="4"
+                            rx="2"
+                            fill="#E5E7EB"
+                        />
+                        <rect
+                            x="175"
+                            y="62"
+                            width="70"
+                            height="4"
+                            rx="2"
+                            fill="#E5E7EB"
+                        />
+                        <rect
+                            x="175"
+                            y="80"
+                            width="110"
+                            height="50"
+                            rx="6"
+                            fill="#F8F9FA"
+                        />
+                        <rect
+                            x="185"
+                            y="92"
+                            width="30"
+                            height="4"
+                            rx="2"
+                            fill="#34BEE9"
+                        />
+                        <rect
+                            x="185"
+                            y="102"
+                            width="50"
+                            height="3"
+                            rx="1.5"
+                            fill="#E5E7EB"
+                        />
+                        <rect
+                            x="185"
+                            y="110"
+                            width="40"
+                            height="3"
+                            rx="1.5"
+                            fill="#E5E7EB"
+                        />
+                        <rect
+                            x="175"
+                            y="140"
+                            width="110"
+                            height="40"
+                            rx="6"
+                            fill="#F8F9FA"
+                        />
+                        <circle
+                            cx="195"
+                            cy="158"
+                            r="10"
+                            fill="#E74F3D"
+                            opacity="0.1"
+                        />
+                        <circle cx="195" cy="158" r="4" fill="#E74F3D" />
+                        <rect
+                            x="215"
+                            y="152"
+                            width="50"
+                            height="4"
+                            rx="2"
+                            fill="#171717"
+                        />
+                        <rect
+                            x="215"
+                            y="162"
+                            width="40"
+                            height="3"
+                            rx="1.5"
+                            fill="#E5E7EB"
+                        />
+                        <rect
+                            x="20"
+                            y="115"
+                            width="120"
+                            height="85"
+                            rx="8"
+                            fill="#FFFFFF"
+                            stroke="#E5E7EB"
+                            stroke-width="1"
+                        />
+                        <rect
+                            x="35"
+                            y="130"
+                            width="40"
+                            height="40"
+                            rx="20"
+                            fill="#34BEE9"
+                            opacity="0.1"
+                        />
+                        <path
+                            d="M45 140 L55 150 L65 135"
+                            stroke="#34BEE9"
+                            stroke-width="3"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <rect
+                            x="85"
+                            y="135"
+                            width="40"
+                            height="5"
+                            rx="2.5"
+                            fill="#171717"
+                        />
+                        <rect
+                            x="85"
+                            y="145"
+                            width="30"
+                            height="3"
+                            rx="1.5"
+                            fill="#E5E7EB"
+                        />
+                        <rect
+                            x="35"
+                            y="185"
+                            width="90"
+                            height="8"
+                            rx="4"
+                            fill="#E5E7EB"
+                        />
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Colors -->
+        <section class="section" id="logotipo">
+            <div class="section-header" data-num="01">
+                <div
+                    class="section-label"
+                    style="display: flex; align-items: center; gap: 8px"
+                >
+                    <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                    >
+                        <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                        <path d="M2 17l10 5 10-5" />
+                        <path d="M2 12l10 5 10-5" />
+                    </svg>
+                    Logótipo
+                </div>
+                <h2>Versões do Logótipo</h2>
+                <p>
+                    Utilize sempre os ficheiros SVG para aplicações digitais. O
+                    ícone é vermelho (#E74F3D). Em fundos claros, o logótipo
+                    completo deve ser todo em vermelho.
+                </p>
+            </div>
+            <div class="logo-showcase">
+                <!-- Completo fundo claro (todo vermelho) -->
+                <div class="logo-card light">
+                    <div class="logo-preview">
+                        <svg
+                            viewBox="0 0 300 72"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                fill="#E74F3D"
+                                d="M32.8,4.6C32.8,4.6,32.8,4.6,32.8,4.6c-0.1,0-0.1-0.1-0.2-0.1c0,0,0,0,0,0c-0.1,0-0.1,0-0.2-0.1c0,0,0,0-0.1,0 c-0.1,0-0.1,0-0.2,0c0,0,0,0-0.1,0c-0.1,0-0.1,0-0.2,0c-0.1,0-0.1,0-0.2,0c0,0,0,0-0.1,0c-0.1,0-0.1,0-0.2,0c0,0,0,0-0.1,0 c-0.1,0-0.1,0-0.2,0.1c0,0,0,0,0,0c-0.1,0-0.1,0.1-0.2,0.1c0,0,0,0,0,0l-25.9,15c-0.5,0.3-0.9,0.9-0.9,1.5V51c0,0,0,0,0,0 c0,0.1,0,0.1,0,0.2c0,0,0,0,0,0c0,0.1,0,0.1,0,0.2c0,0,0,0,0,0.1c0,0.1,0,0.1,0.1,0.2c0,0,0,0,0,0c0,0.1,0.1,0.1,0.1,0.2 c0,0,0,0,0,0c0,0.1,0.1,0.1,0.1,0.2c0,0,0.1,0.1,0.1,0.1c0,0,0,0.1,0.1,0.1c0,0,0.1,0.1,0.1,0.1c0,0,0,0,0.1,0c0,0,0.1,0.1,0.1,0.1 c0,0,0,0,0,0l0,0c0,0,0,0,0,0l25.9,15c0.3,0.2,0.6,0.2,0.9,0.2c0.3,0,0.6-0.1,0.9-0.2l25.9-15c0,0,0,0,0,0l0,0c0,0,0,0,0,0 c0,0,0.1-0.1,0.1-0.1c0,0,0,0,0.1,0c0,0,0.1-0.1,0.1-0.1c0,0,0,0,0.1-0.1c0,0,0.1-0.1,0.1-0.1c0-0.1,0.1-0.1,0.1-0.2c0,0,0,0,0,0 c0-0.1,0.1-0.1,0.1-0.2c0,0,0,0,0,0c0-0.1,0-0.1,0.1-0.2c0,0,0,0,0,0c0-0.1,0-0.1,0-0.2c0,0,0,0,0,0c0-0.1,0-0.1,0-0.2c0,0,0,0,0,0 V21.1c0-0.6-0.3-1.2-0.9-1.5L32.8,4.6z M33.7,25.5l10.7,18.6l-10.7,6.2V25.5z M7.7,22.1L30.1,9.2v9.2l-14.4,25L7.7,48V22.1z M30.1,25.5v24.8l-10.7-6.2L30.1,25.5z M31.9,64L9.5,51l7.5-4.3l14,8.1c0,0,0,0,0,0c0.1,0,0.1,0.1,0.2,0.1c0,0,0,0,0,0 c0.1,0,0.1,0,0.2,0.1c0,0,0,0,0.1,0c0.1,0,0.1,0,0.2,0c0,0,0,0,0.1,0c0.1,0,0.1,0,0.2,0c0.1,0,0.1,0,0.2,0c0,0,0,0,0.1,0 c0.1,0,0.1,0,0.2,0c0,0,0,0,0.1,0c0.1,0,0.1,0,0.2-0.1c0,0,0,0,0,0c0.1,0,0.1-0.1,0.2-0.1c0,0,0,0,0,0l14-8.1l7.5,4.3L31.9,64z M56,48l-7.9-4.6l-14.4-25V9.2L56,22.1V48z"
+                            />
+                            <path
+                                fill="#E74F3D"
+                                d="M190.5,23.4h13.6v4h-13.6v13.3c0,0.2,0.2,0.6,0.4,0.7l5,3.1c0.4,0.3,1.3,0.5,1.8,0.5h6.4v4h-6.4 c-1.2,0-2.9-0.5-3.9-1.1l-5-3.1c-1.3-0.8-2.3-2.5-2.3-4.1V19.4l4-1.2V23.4z M234.5,26.4l-9.2-3.1c-1.2-0.4-3-0.4-4.2,0l-9.2,3.1 c-1.6,0.5-2.8,2.2-2.8,3.9v10.5c0,1.5,0.9,3.2,2.2,4.1l4.4,2.9c1,0.7,2.7,1.2,3.9,1.2h15.8v-4h-15.8c-0.5,0-1.4-0.3-1.8-0.5 l-4.4-2.9c-0.2-0.1-0.4-0.5-0.4-0.7l0-10.5c0-0.1,0.1-0.2,0.1-0.2l9.2-3.1c0.4-0.1,1.3-0.1,1.7,0l9.2,3.1c0.1,0,0.1,0.1,0.1,0.2 v4.6h-14.9v4h15.4c2,0,3.6-1.6,3.6-3.5v-5C237.4,28.6,236.1,26.9,234.5,26.4z M97.4,26.4l-9.2-3.1c-1.2-0.4-3-0.4-4.2,0l-9.2,3.1 c-1.6,0.5-2.8,2.2-2.8,3.9v10.5c0,1.5,0.9,3.2,2.2,4.1l4.4,2.9c1,0.7,2.7,1.2,3.9,1.2h15.8v-4H82.4c-0.5,0-1.4-0.3-1.8-0.5 l-4.4-2.9c-0.2-0.1-0.4-0.5-0.4-0.7l0-10.5c0-0.1,0.1-0.2,0.1-0.2l9.2-3.1c0.4-0.1,1.3-0.1,1.7,0l9.2,3.1c0.1,0,0.1,0.1,0.1,0.2 v4.6H81.3v4h15.4c2,0,3.6-1.6,3.6-3.5v-5C100.2,28.6,99,26.9,97.4,26.4z M134,18.8v26.7c0,2-1.6,3.5-3.5,3.5h-14.7 c-1.3,0-3-0.6-4-1.4l-4.1-3.1c-1.2-0.9-2-2.6-2-4.1v-9.7c0-1.7,1.2-3.4,2.8-4l9.3-3.5c1.2-0.5,3-0.5,4.3-0.1l8.1,2.7v-6L134,18.8z M130,30.3l-9.3-3.2c-0.2-0.1-0.4-0.1-0.7-0.1c-0.3,0-0.7,0-0.9,0.1l-9.3,3.5c0,0-0.1,0.2-0.1,0.2l0,9.6c0,0.2,0.3,0.8,0.4,0.9 l4.1,3.1c0.3,0.3,1.1,0.5,1.6,0.5H130V30.3z M177.7,26.7l-4.1-2.8c-1.2-0.8-3.1-1.1-4.5-0.6l-9.2,3.3l-3.7-2.7 c-1.2-0.9-3.1-1.2-4.6-0.7l-7.6,2.8h-4v22.8h4V30.4l9-3.2c0.2-0.1,0.7,0,0.8,0.1l3.7,2.7c0.2,0.1,0.4,0.6,0.4,0.9v18.1h4V30.8 c0-0.2-0.1-0.4-0.1-0.6l8.6-3.1c0.2-0.1,0.7,0,0.9,0.1l4.1,2.8c0.2,0.1,0.4,0.6,0.4,0.8v18.1h4V30.8 C179.9,29.3,179,27.6,177.7,26.7z M257.1,45.2c-0.4,0.1-1.3,0.1-1.7,0l-8.4-3c-0.1,0-0.2-0.2-0.2-0.2l0-11.4c0-0.1,0.1-0.2,0.1-0.2 l8.4-3c0.3-0.1,1.1-0.1,1.5,0l7.1,2.9c0.1,0,0.2,0.2,0.2,0.3v6.4l4-1.2v-5.2c0-1.7-1.1-3.4-2.7-4l-7.1-2.9 c-1.2-0.5-3.1-0.5-4.3-0.1l-8.4,3c-1.6,0.6-2.8,2.3-2.8,4v11.4c0,1.7,1.2,3.4,2.8,4l8.4,3c0.7,0.2,1.5,0.4,2.3,0.4 c0.7,0,1.3-0.1,1.9-0.3l9.5-2.9v-4.2L257.1,45.2z M294.2,26.7l-4.8-2.9c-1.3-0.8-3.2-0.9-4.5-0.4l-6.5,2.5v-7l-4,1.2v28.8h4V30.2 l8-3c0.2-0.1,0.8,0,1,0.1l4.8,2.9c0.1,0.1,0.4,0.5,0.4,0.7v18.1h4V30.8C296.5,29.3,295.6,27.5,294.2,26.7z"
+                            />
+                        </svg>
+                    </div>
+                    <div class="logo-card-label">
+                        Fundo Claro — Todo em Vermelho
+                    </div>
+                    <p class="logo-card-usage">
+                        Branco / fundos claros. Documentos oficiais, propostas,
+                        institucional.
+                    </p>
+                    <div class="logo-downloads">
+                        <a
+                            href="https://drive.google.com/file/d/1BmRlySO6871FwSNcfaL2G33bQ90mPDnB/view?usp=drive_link"
+                            target="_blank"
+                            class="link-small"
+                            >SVG</a
+                        >
+                        <a href="https://drive.google.com/file/d/1-i1p46PCVOErLXR4QtODvUo4r3CFwZtd/view?usp=drive_link" target="_blank" class="link-small"
+                            >PNG</a
+                        >
+                        <a href="https://drive.google.com/file/d/1gKtBYp72q5prUD2sCaNoZt9XL3d_Hu61/view?usp=drive_link" target="_blank" class="link-small"
+                            >Vector</a
+                        >
+                    </div>
+                </div>
+
+                <!-- Completo fundo escuro -->
+                <div class="logo-card blue-bg">
+                    <div class="logo-preview">
+                        <svg
+                            viewBox="0 0 300 72"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                fill="#E74F3D"
+                                d="M32.8,4.6C32.8,4.6,32.8,4.6,32.8,4.6c-0.1,0-0.1-0.1-0.2-0.1c0,0,0,0,0,0c-0.1,0-0.1,0-0.2-0.1c0,0,0,0-0.1,0 c-0.1,0-0.1,0-0.2,0c0,0,0,0-0.1,0c-0.1,0-0.1,0-0.2,0c-0.1,0-0.1,0-0.2,0c0,0,0,0-0.1,0c-0.1,0-0.1,0-0.2,0c0,0,0,0-0.1,0 c-0.1,0-0.1,0-0.2,0.1c0,0,0,0,0,0c-0.1,0-0.1,0.1-0.2,0.1c0,0,0,0,0,0l-25.9,15c-0.5,0.3-0.9,0.9-0.9,1.5V51c0,0,0,0,0,0 c0,0.1,0,0.1,0,0.2c0,0,0,0,0,0c0,0.1,0,0.1,0,0.2c0,0,0,0,0,0.1c0,0.1,0,0.1,0.1,0.2c0,0,0,0,0,0c0,0.1,0.1,0.1,0.1,0.2 c0,0,0,0,0,0c0,0.1,0.1,0.1,0.1,0.2c0,0,0.1,0.1,0.1,0.1c0,0,0,0.1,0.1,0.1c0,0,0.1,0.1,0.1,0.1c0,0,0,0,0.1,0c0,0,0.1,0.1,0.1,0.1 c0,0,0,0,0,0l0,0c0,0,0,0,0,0l25.9,15c0.3,0.2,0.6,0.2,0.9,0.2c0.3,0,0.6-0.1,0.9-0.2l25.9-15c0,0,0,0,0,0l0,0c0,0,0,0,0,0 c0,0,0.1-0.1,0.1-0.1c0,0,0,0,0.1,0c0,0,0.1-0.1,0.1-0.1c0,0,0,0,0.1-0.1c0,0,0.1-0.1,0.1-0.1c0-0.1,0.1-0.1,0.1-0.2c0,0,0,0,0,0 c0-0.1,0.1-0.1,0.1-0.2c0,0,0,0,0,0c0-0.1,0-0.1,0.1-0.2c0,0,0,0,0,0c0-0.1,0-0.1,0-0.2c0,0,0,0,0,0c0-0.1,0-0.1,0-0.2c0,0,0,0,0,0 V21.1c0-0.6-0.3-1.2-0.9-1.5L32.8,4.6z M33.7,25.5l10.7,18.6l-10.7,6.2V25.5z M7.7,22.1L30.1,9.2v9.2l-14.4,25L7.7,48V22.1z M30.1,25.5v24.8l-10.7-6.2L30.1,25.5z M31.9,64L9.5,51l7.5-4.3l14,8.1c0,0,0,0,0,0c0.1,0,0.1,0.1,0.2,0.1c0,0,0,0,0,0 c0.1,0,0.1,0,0.2,0.1c0,0,0,0,0.1,0c0.1,0,0.1,0,0.2,0c0,0,0,0,0.1,0c0.1,0,0.1,0,0.2,0c0.1,0,0.1,0,0.2,0c0,0,0,0,0.1,0 c0.1,0,0.1,0,0.2,0c0,0,0,0,0.1,0c0.1,0,0.1,0,0.2-0.1c0,0,0,0,0,0c0.1,0,0.1-0.1,0.2-0.1c0,0,0,0,0,0l14-8.1l7.5,4.3L31.9,64z M56,48l-7.9-4.6l-14.4-25V9.2L56,22.1V48z"
+                            />
+                            <path
+                                fill="#E5E7EB"
+                                d="M190.5,23.4h13.6v4h-13.6v13.3c0,0.2,0.2,0.6,0.4,0.7l5,3.1c0.4,0.3,1.3,0.5,1.8,0.5h6.4v4h-6.4 c-1.2,0-2.9-0.5-3.9-1.1l-5-3.1c-1.3-0.8-2.3-2.5-2.3-4.1V19.4l4-1.2V23.4z M234.5,26.4l-9.2-3.1c-1.2-0.4-3-0.4-4.2,0l-9.2,3.1 c-1.6,0.5-2.8,2.2-2.8,3.9v10.5c0,1.5,0.9,3.2,2.2,4.1l4.4,2.9c1,0.7,2.7,1.2,3.9,1.2h15.8v-4h-15.8c-0.5,0-1.4-0.3-1.8-0.5 l-4.4-2.9c-0.2-0.1-0.4-0.5-0.4-0.7l0-10.5c0-0.1,0.1-0.2,0.1-0.2l9.2-3.1c0.4-0.1,1.3-0.1,1.7,0l9.2,3.1c0.1,0,0.1,0.1,0.1,0.2 v4.6h-14.9v4h15.4c2,0,3.6-1.6,3.6-3.5v-5C237.4,28.6,236.1,26.9,234.5,26.4z M97.4,26.4l-9.2-3.1c-1.2-0.4-3-0.4-4.2,0l-9.2,3.1 c-1.6,0.5-2.8,2.2-2.8,3.9v10.5c0,1.5,0.9,3.2,2.2,4.1l4.4,2.9c1,0.7,2.7,1.2,3.9,1.2h15.8v-4H82.4c-0.5,0-1.4-0.3-1.8-0.5 l-4.4-2.9c-0.2-0.1-0.4-0.5-0.4-0.7l0-10.5c0-0.1,0.1-0.2,0.1-0.2l9.2-3.1c0.4-0.1,1.3-0.1,1.7,0l9.2,3.1c0.1,0,0.1,0.1,0.1,0.2 v4.6H81.3v4h15.4c2,0,3.6-1.6,3.6-3.5v-5C100.2,28.6,99,26.9,97.4,26.4z M134,18.8v26.7c0,2-1.6,3.5-3.5,3.5h-14.7 c-1.3,0-3-0.6-4-1.4l-4.1-3.1c-1.2-0.9-2-2.6-2-4.1v-9.7c0-1.7,1.2-3.4,2.8-4l9.3-3.5c1.2-0.5,3-0.5,4.3-0.1l8.1,2.7v-6L134,18.8z M130,30.3l-9.3-3.2c-0.2-0.1-0.4-0.1-0.7-0.1c-0.3,0-0.7,0-0.9,0.1l-9.3,3.5c0,0-0.1,0.2-0.1,0.2l0,9.6c0,0.2,0.3,0.8,0.4,0.9 l4.1,3.1c0.3,0.3,1.1,0.5,1.6,0.5H130V30.3z M177.7,26.7l-4.1-2.8c-1.2-0.8-3.1-1.1-4.5-0.6l-9.2,3.3l-3.7-2.7 c-1.2-0.9-3.1-1.2-4.6-0.7l-7.6,2.8h-4v22.8h4V30.4l9-3.2c0.2-0.1,0.7,0,0.8,0.1l3.7,2.7c0.2,0.1,0.4,0.6,0.4,0.9v18.1h4V30.8 c0-0.2-0.1-0.4-0.1-0.6l8.6-3.1c0.2-0.1,0.7,0,0.9,0.1l4.1,2.8c0.2,0.1,0.4,0.6,0.4,0.8v18.1h4V30.8 C179.9,29.3,179,27.6,177.7,26.7z M257.1,45.2c-0.4,0.1-1.3,0.1-1.7,0l-8.4-3c-0.1,0-0.2-0.2-0.2-0.2l0-11.4c0-0.1,0.1-0.2,0.1-0.2 l8.4-3c0.3-0.1,1.1-0.1,1.5,0l7.1,2.9c0.1,0,0.2,0.2,0.2,0.3v6.4l4-1.2v-5.2c0-1.7-1.1-3.4-2.7-4l-7.1-2.9 c-1.2-0.5-3.1-0.5-4.3-0.1l-8.4,3c-1.6,0.6-2.8,2.3-2.8,4v11.4c0,1.7,1.2,3.4,2.8,4l8.4,3c0.7,0.2,1.5,0.4,2.3,0.4 c0.7,0,1.3-0.1,1.9-0.3l9.5-2.9v-4.2L257.1,45.2z M294.2,26.7l-4.8-2.9c-1.3-0.8-3.2-0.9-4.5-0.4l-6.5,2.5v-7l-4,1.2v28.8h4V30.2 l8-3c0.2-0.1,0.8,0,1,0.1l4.8,2.9c0.1,0.1,0.4,0.5,0.4,0.7v18.1h4V30.8C296.5,29.3,295.6,27.5,294.2,26.7z"
+                            />
+                        </svg>
+                    </div>
+                    <div class="logo-card-label">Fundo Escuro — Padrão</div>
+                    <p class="logo-card-usage">
+                        Escuros (#000, #0B0E15, #171717). Digital, headers,
+                        apresentações.
+                    </p>
+                    <div class="logo-downloads">
+                        <a
+                            href="https://drive.google.com/file/d/1_X_XT4-147bZChXTGnBKh1TeA_eO_V83/view?usp=drive_link"
+                            target="_blank"
+                            class="link-small"
+                            >SVG</a
+                        >
+                        <a href="https://drive.google.com/file/d/1-Yk1yWh5C9Yoknt8PngJNQGb9Mkr498J/view?usp=drive_link" target="_blank" class="link-small"
+                            >PNG</a
+                        >
+                        <a href="https://drive.google.com/file/d/18b-QJDZcahW6pSbhkkmkTUvodzTxXBrL/view?usp=drive_link" target="_blank" class="link-small"
+                            >Vector</a
+                        >
+                    </div>
+                </div>
+
+                <!-- Branco -->
+                <div class="logo-card black-bg">
+                    <div class="logo-preview">
+                        <svg
+                            viewBox="0 0 300 72"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                fill="#FFFFFF"
+                                d="M32.8,4.6C32.8,4.6,32.8,4.6,32.8,4.6c-0.1,0-0.1-0.1-0.2-0.1c0,0,0,0,0,0c-0.1,0-0.1,0-0.2-0.1c0,0,0,0-0.1,0 c-0.1,0-0.1,0-0.2,0c0,0,0,0-0.1,0c-0.1,0-0.1,0-0.2,0c-0.1,0-0.1,0-0.2,0c0,0,0,0-0.1,0c-0.1,0-0.1,0-0.2,0c0,0,0,0-0.1,0 c-0.1,0-0.1,0-0.2,0.1c0,0,0,0,0,0c-0.1,0-0.1,0.1-0.2,0.1c0,0,0,0,0,0l-25.9,15c-0.5,0.3-0.9,0.9-0.9,1.5V51c0,0,0,0,0,0 c0,0.1,0,0.1,0,0.2c0,0,0,0,0,0c0,0.1,0,0.1,0,0.2c0,0,0,0,0,0.1c0,0.1,0,0.1,0.1,0.2c0,0,0,0,0,0c0,0.1,0.1,0.1,0.1,0.2 c0,0,0,0,0,0c0,0.1,0.1,0.1,0.1,0.2c0,0,0.1,0.1,0.1,0.1c0,0,0,0.1,0.1,0.1c0,0,0.1,0.1,0.1,0.1c0,0,0,0,0.1,0c0,0,0.1,0.1,0.1,0.1 c0,0,0,0,0,0l0,0c0,0,0,0,0,0l25.9,15c0.3,0.2,0.6,0.2,0.9,0.2c0.3,0,0.6-0.1,0.9-0.2l25.9-15c0,0,0,0,0,0l0,0c0,0,0,0,0,0 c0,0,0.1-0.1,0.1-0.1c0,0,0,0,0.1,0c0,0,0.1-0.1,0.1-0.1c0,0,0,0,0.1-0.1c0,0,0.1-0.1,0.1-0.1c0-0.1,0.1-0.1,0.1-0.2c0,0,0,0,0,0 c0-0.1,0.1-0.1,0.1-0.2c0,0,0,0,0,0c0-0.1,0-0.1,0.1-0.2c0,0,0,0,0,0c0-0.1,0-0.1,0-0.2c0,0,0,0,0,0c0-0.1,0-0.1,0-0.2c0,0,0,0,0,0 V21.1c0-0.6-0.3-1.2-0.9-1.5L32.8,4.6z M33.7,25.5l10.7,18.6l-10.7,6.2V25.5z M7.7,22.1L30.1,9.2v9.2l-14.4,25L7.7,48V22.1z M30.1,25.5v24.8l-10.7-6.2L30.1,25.5z M31.9,64L9.5,51l7.5-4.3l14,8.1c0,0,0,0,0,0c0.1,0,0.1,0.1,0.2,0.1c0,0,0,0,0,0 c0.1,0,0.1,0,0.2,0.1c0,0,0,0,0.1,0c0.1,0,0.1,0,0.2,0c0,0,0,0,0.1,0c0.1,0,0.1,0,0.2,0c0.1,0,0.1,0,0.2,0c0,0,0,0,0.1,0 c0.1,0,0.1,0,0.2,0c0,0,0,0,0.1,0c0.1,0,0.1,0,0.2-0.1c0,0,0,0,0,0c0.1,0,0.1-0.1,0.2-0.1c0,0,0,0,0,0l14-8.1l7.5,4.3L31.9,64z M56,48l-7.9-4.6l-14.4-25V9.2L56,22.1V48z"
+                            />
+                            <path
+                                fill="#FFFFFF"
+                                d="M190.5,23.4h13.6v4h-13.6v13.3c0,0.2,0.2,0.6,0.4,0.7l5,3.1c0.4,0.3,1.3,0.5,1.8,0.5h6.4v4h-6.4 c-1.2,0-2.9-0.5-3.9-1.1l-5-3.1c-1.3-0.8-2.3-2.5-2.3-4.1V19.4l4-1.2V23.4z M234.5,26.4l-9.2-3.1c-1.2-0.4-3-0.4-4.2,0l-9.2,3.1 c-1.6,0.5-2.8,2.2-2.8,3.9v10.5c0,1.5,0.9,3.2,2.2,4.1l4.4,2.9c1,0.7,2.7,1.2,3.9,1.2h15.8v-4h-15.8c-0.5,0-1.4-0.3-1.8-0.5 l-4.4-2.9c-0.2-0.1-0.4-0.5-0.4-0.7l0-10.5c0-0.1,0.1-0.2,0.1-0.2l9.2-3.1c0.4-0.1,1.3-0.1,1.7,0l9.2,3.1c0.1,0,0.1,0.1,0.1,0.2 v4.6h-14.9v4h15.4c2,0,3.6-1.6,3.6-3.5v-5C237.4,28.6,236.1,26.9,234.5,26.4z M97.4,26.4l-9.2-3.1c-1.2-0.4-3-0.4-4.2,0l-9.2,3.1 c-1.6,0.5-2.8,2.2-2.8,3.9v10.5c0,1.5,0.9,3.2,2.2,4.1l4.4,2.9c1,0.7,2.7,1.2,3.9,1.2h15.8v-4H82.4c-0.5,0-1.4-0.3-1.8-0.5 l-4.4-2.9c-0.2-0.1-0.4-0.5-0.4-0.7l0-10.5c0-0.1,0.1-0.2,0.1-0.2l9.2-3.1c0.4-0.1,1.3-0.1,1.7,0l9.2,3.1c0.1,0,0.1,0.1,0.1,0.2 v4.6H81.3v4h15.4c2,0,3.6-1.6,3.6-3.5v-5C100.2,28.6,99,26.9,97.4,26.4z M134,18.8v26.7c0,2-1.6,3.5-3.5,3.5h-14.7 c-1.3,0-3-0.6-4-1.4l-4.1-3.1c-1.2-0.9-2-2.6-2-4.1v-9.7c0-1.7,1.2-3.4,2.8-4l9.3-3.5c1.2-0.5,3-0.5,4.3-0.1l8.1,2.7v-6L134,18.8z M130,30.3l-9.3-3.2c-0.2-0.1-0.4-0.1-0.7-0.1c-0.3,0-0.7,0-0.9,0.1l-9.3,3.5c0,0-0.1,0.2-0.1,0.2l0,9.6c0,0.2,0.3,0.8,0.4,0.9 l4.1,3.1c0.3,0.3,1.1,0.5,1.6,0.5H130V30.3z M177.7,26.7l-4.1-2.8c-1.2-0.8-3.1-1.1-4.5-0.6l-9.2,3.3l-3.7-2.7 c-1.2-0.9-3.1-1.2-4.6-0.7l-7.6,2.8h-4v22.8h4V30.4l9-3.2c0.2-0.1,0.7,0,0.8,0.1l3.7,2.7c0.2,0.1,0.4,0.6,0.4,0.9v18.1h4V30.8 c0-0.2-0.1-0.4-0.1-0.6l8.6-3.1c0.2-0.1,0.7,0,0.9,0.1l4.1,2.8c0.2,0.1,0.4,0.6,0.4,0.8v18.1h4V30.8 C179.9,29.3,179,27.6,177.7,26.7z M257.1,45.2c-0.4,0.1-1.3,0.1-1.7,0l-8.4-3c-0.1,0-0.2-0.2-0.2-0.2l0-11.4c0-0.1,0.1-0.2,0.1-0.2 l8.4-3c0.3-0.1,1.1-0.1,1.5,0l7.1,2.9c0.1,0,0.2,0.2,0.2,0.3v6.4l4-1.2v-5.2c0-1.7-1.1-3.4-2.7-4l-7.1-2.9 c-1.2-0.5-3.1-0.5-4.3-0.1l-8.4,3c-1.6,0.6-2.8,2.3-2.8,4v11.4c0,1.7,1.2,3.4,2.8,4l8.4,3c0.7,0.2,1.5,0.4,2.3,0.4 c0.7,0,1.3-0.1,1.9-0.3l9.5-2.9v-4.2L257.1,45.2z M294.2,26.7l-4.8-2.9c-1.3-0.8-3.2-0.9-4.5-0.4l-6.5,2.5v-7l-4,1.2v28.8h4V30.2 l8-3c0.2-0.1,0.8,0,1,0.1l4.8,2.9c0.1,0.1,0.4,0.5,0.4,0.7v18.1h4V30.8C296.5,29.3,295.6,27.5,294.2,26.7z"
+                            />
+                        </svg>
+                    </div>
+                    <div class="logo-card-label">Branco / Monocromático</div>
+                    <p class="logo-card-usage">
+                        Escuros / fotos. Quando o padrão não contrasta
+                        suficientemente.
+                    </p>
+                    <div class="logo-downloads">
+                        <a
+                            href="https://drive.google.com/file/d/1dKCw-_iH9jYS6l3-cppkVkQGzi0_N--I/view?usp=drive_link"
+                            target="_blank"
+                            class="link-small"
+                            >SVG</a
+                        >
+                        <a href="https://drive.google.com/file/d/13061H6LRccXsyRLuCiXopuczKGtNo_0S/view?usp=drive_link" target="_blank" class="link-small"
+                            >PNG</a
+                        >
+                        <a href="https://drive.google.com/file/d/1rQnhWb3P3zboPkBac9QmSX-q63f1UNT8/view?usp=drive_link" target="_blank" class="link-small"
+                            >Vector</a
+                        >
+                    </div>
+                </div>
+
+                <!-- Preto -->
+                <div class="logo-card light">
+                    <div class="logo-preview">
+                        <svg
+                            viewBox="0 0 300 72"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                fill="#000000"
+                                d="M32.8,4.6C32.8,4.6,32.8,4.6,32.8,4.6c-0.1,0-0.1-0.1-0.2-0.1c0,0,0,0,0,0c-0.1,0-0.1,0-0.2-0.1c0,0,0,0-0.1,0 c-0.1,0-0.1,0-0.2,0c0,0,0,0-0.1,0c-0.1,0-0.1,0-0.2,0c-0.1,0-0.1,0-0.2,0c0,0,0,0-0.1,0c-0.1,0-0.1,0-0.2,0c0,0,0,0-0.1,0 c-0.1,0-0.1,0-0.2,0.1c0,0,0,0,0,0c-0.1,0-0.1,0.1-0.2,0.1c0,0,0,0,0,0l-25.9,15c-0.5,0.3-0.9,0.9-0.9,1.5V51c0,0,0,0,0,0 c0,0.1,0,0.1,0,0.2c0,0,0,0,0,0c0,0.1,0,0.1,0,0.2c0,0,0,0,0,0.1c0,0.1,0,0.1,0.1,0.2c0,0,0,0,0,0c0,0.1,0.1,0.1,0.1,0.2 c0,0,0,0,0,0c0,0.1,0.1,0.1,0.1,0.2c0,0,0.1,0.1,0.1,0.1c0,0,0,0.1,0.1,0.1c0,0,0.1,0.1,0.1,0.1c0,0,0,0,0.1,0c0,0,0.1,0.1,0.1,0.1 c0,0,0,0,0,0l0,0c0,0,0,0,0,0l25.9,15c0.3,0.2,0.6,0.2,0.9,0.2c0.3,0,0.6-0.1,0.9-0.2l25.9-15c0,0,0,0,0,0l0,0c0,0,0,0,0,0 c0,0,0.1-0.1,0.1-0.1c0,0,0,0,0.1,0c0,0,0.1-0.1,0.1-0.1c0,0,0,0,0.1-0.1c0,0,0.1-0.1,0.1-0.1c0-0.1,0.1-0.1,0.1-0.2c0,0,0,0,0,0 c0-0.1,0.1-0.1,0.1-0.2c0,0,0,0,0,0c0-0.1,0-0.1,0.1-0.2c0,0,0,0,0,0c0-0.1,0-0.1,0-0.2c0,0,0,0,0,0c0-0.1,0-0.1,0-0.2c0,0,0,0,0,0 V21.1c0-0.6-0.3-1.2-0.9-1.5L32.8,4.6z M33.7,25.5l10.7,18.6l-10.7,6.2V25.5z M7.7,22.1L30.1,9.2v9.2l-14.4,25L7.7,48V22.1z M30.1,25.5v24.8l-10.7-6.2L30.1,25.5z M31.9,64L9.5,51l7.5-4.3l14,8.1c0,0,0,0,0,0c0.1,0,0.1,0.1,0.2,0.1c0,0,0,0,0,0 c0.1,0,0.1,0,0.2,0.1c0,0,0,0,0.1,0c0.1,0,0.1,0,0.2,0c0,0,0,0,0.1,0c0.1,0,0.1,0,0.2,0c0.1,0,0.1,0,0.2,0c0,0,0,0,0.1,0 c0.1,0,0.1,0,0.2,0c0,0,0,0,0.1,0c0.1,0,0.1,0,0.2-0.1c0,0,0,0,0,0c0.1,0,0.1-0.1,0.2-0.1c0,0,0,0,0,0l14-8.1l7.5,4.3L31.9,64z M56,48l-7.9-4.6l-14.4-25V9.2L56,22.1V48z"
+                            />
+                            <path
+                                fill="#000000"
+                                d="M190.5,23.4h13.6v4h-13.6v13.3c0,0.2,0.2,0.6,0.4,0.7l5,3.1c0.4,0.3,1.3,0.5,1.8,0.5h6.4v4h-6.4 c-1.2,0-2.9-0.5-3.9-1.1l-5-3.1c-1.3-0.8-2.3-2.5-2.3-4.1V19.4l4-1.2V23.4z M234.5,26.4l-9.2-3.1c-1.2-0.4-3-0.4-4.2,0l-9.2,3.1 c-1.6,0.5-2.8,2.2-2.8,3.9v10.5c0,1.5,0.9,3.2,2.2,4.1l4.4,2.9c1,0.7,2.7,1.2,3.9,1.2h15.8v-4h-15.8c-0.5,0-1.4-0.3-1.8-0.5 l-4.4-2.9c-0.2-0.1-0.4-0.5-0.4-0.7l0-10.5c0-0.1,0.1-0.2,0.1-0.2l9.2-3.1c0.4-0.1,1.3-0.1,1.7,0l9.2,3.1c0.1,0,0.1,0.1,0.1,0.2 v4.6h-14.9v4h15.4c2,0,3.6-1.6,3.6-3.5v-5C237.4,28.6,236.1,26.9,234.5,26.4z M97.4,26.4l-9.2-3.1c-1.2-0.4-3-0.4-4.2,0l-9.2,3.1 c-1.6,0.5-2.8,2.2-2.8,3.9v10.5c0,1.5,0.9,3.2,2.2,4.1l4.4,2.9c1,0.7,2.7,1.2,3.9,1.2h15.8v-4H82.4c-0.5,0-1.4-0.3-1.8-0.5 l-4.4-2.9c-0.2-0.1-0.4-0.5-0.4-0.7l0-10.5c0-0.1,0.1-0.2,0.1-0.2l9.2-3.1c0.4-0.1,1.3-0.1,1.7,0l9.2,3.1c0.1,0,0.1,0.1,0.1,0.2 v4.6H81.3v4h15.4c2,0,3.6-1.6,3.6-3.5v-5C100.2,28.6,99,26.9,97.4,26.4z M134,18.8v26.7c0,2-1.6,3.5-3.5,3.5h-14.7 c-1.3,0-3-0.6-4-1.4l-4.1-3.1c-1.2-0.9-2-2.6-2-4.1v-9.7c0-1.7,1.2-3.4,2.8-4l9.3-3.5c1.2-0.5,3-0.5,4.3-0.1l8.1,2.7v-6L134,18.8z M130,30.3l-9.3-3.2c-0.2-0.1-0.4-0.1-0.7-0.1c-0.3,0-0.7,0-0.9,0.1l-9.3,3.5c0,0-0.1,0.2-0.1,0.2l0,9.6c0,0.2,0.3,0.8,0.4,0.9 l4.1,3.1c0.3,0.3,1.1,0.5,1.6,0.5H130V30.3z M177.7,26.7l-4.1-2.8c-1.2-0.8-3.1-1.1-4.5-0.6l-9.2,3.3l-3.7-2.7 c-1.2-0.9-3.1-1.2-4.6-0.7l-7.6,2.8h-4v22.8h4V30.4l9-3.2c0.2-0.1,0.7,0,0.8,0.1l3.7,2.7c0.2,0.1,0.4,0.6,0.4,0.9v18.1h4V30.8 c0-0.2-0.1-0.4-0.1-0.6l8.6-3.1c0.2-0.1,0.7,0,0.9,0.1l4.1,2.8c0.2,0.1,0.4,0.6,0.4,0.8v18.1h4V30.8 C179.9,29.3,179,27.6,177.7,26.7z M257.1,45.2c-0.4,0.1-1.3,0.1-1.7,0l-8.4-3c-0.1,0-0.2-0.2-0.2-0.2l0-11.4c0-0.1,0.1-0.2,0.1-0.2 l8.4-3c0.3-0.1,1.1-0.1,1.5,0l7.1,2.9c0.1,0,0.2,0.2,0.2,0.3v6.4l4-1.2v-5.2c0-1.7-1.1-3.4-2.7-4l-7.1-2.9 c-1.2-0.5-3.1-0.5-4.3-0.1l-8.4,3c-1.6,0.6-2.8,2.3-2.8,4v11.4c0,1.7,1.2,3.4,2.8,4l8.4,3c0.7,0.2,1.5,0.4,2.3,0.4 c0.7,0,1.3-0.1,1.9-0.3l9.5-2.9v-4.2L257.1,45.2z M294.2,26.7l-4.8-2.9c-1.3-0.8-3.2-0.9-4.5-0.4l-6.5,2.5v-7l-4,1.2v28.8h4V30.2 l8-3c0.2-0.1,0.8,0,1,0.1l4.8,2.9c0.1,0.1,0.4,0.5,0.4,0.7v18.1h4V30.8C296.5,29.3,295.6,27.5,294.2,26.7z"
+                            />
+                        </svg>
+                    </div>
+                    <div class="logo-card-label">Preto</div>
+                    <p class="logo-card-usage">
+                        Branco / impressão p&b / gravações. Print monocromático,
+                        laser, serigrafia.
+                    </p>
+                    <div class="logo-downloads">
+                        <a
+                            href="https://drive.google.com/file/d/1QntJ8_GPw6_rTOqdYVWwPIA2CgSezYS0/view?usp=drive_link"
+                            target="_blank"
+                            class="link-small"
+                            >SVG</a
+                        >
+                        <a href="https://drive.google.com/file/d/12KV9PcIP-ggke2XIZRsiCE1IxOG_D2Dm/view?usp=drive_link" target="_blank" class="link-small"
+                            >PNG</a
+                        >
+                        <a href="https://drive.google.com/file/d/1JN01gNGnjkdfRH1D0EIiB6FGWRjPx6Vt/view?usp=drive_link" target="_blank" class="link-small"
+                            >Vector</a
+                        >
+                    </div>
+                </div>
+
+                <!-- Ícone apenas -->
+                <div class="logo-card">
+                    <div class="logo-preview">
+                        <svg
+                            viewBox="0 0 72 72"
+                            xmlns="http://www.w3.org/2000/svg"
+                            style="max-height: 48px"
+                        >
+                            <path
+                                fill="#E74F3D"
+                                d="M32.8,4.6C32.8,4.6,32.8,4.6,32.8,4.6c-0.1,0-0.1-0.1-0.2-0.1c0,0,0,0,0,0c-0.1,0-0.1,0-0.2-0.1c0,0,0,0-0.1,0 c-0.1,0-0.1,0-0.2,0c0,0,0,0-0.1,0c-0.1,0-0.1,0-0.2,0c-0.1,0-0.1,0-0.2,0c0,0,0,0-0.1,0c-0.1,0-0.1,0-0.2,0c0,0,0,0-0.1,0 c-0.1,0-0.1,0-0.2,0.1c0,0,0,0,0,0c-0.1,0-0.1,0.1-0.2,0.1c0,0,0,0,0,0l-25.9,15c-0.5,0.3-0.9,0.9-0.9,1.5V51c0,0,0,0,0,0 c0,0.1,0,0.1,0,0.2c0,0,0,0,0,0c0,0.1,0,0.1,0,0.2c0,0,0,0,0,0.1c0,0.1,0,0.1,0.1,0.2c0,0,0,0,0,0c0,0.1,0.1,0.1,0.1,0.2 c0,0,0,0,0,0c0,0.1,0.1,0.1,0.1,0.2c0,0,0.1,0.1,0.1,0.1c0,0,0,0.1,0.1,0.1c0,0,0.1,0.1,0.1,0.1c0,0,0,0,0.1,0c0,0,0.1,0.1,0.1,0.1 c0,0,0,0,0,0l0,0c0,0,0,0,0,0l25.9,15c0.3,0.2,0.6,0.2,0.9,0.2c0.3,0,0.6-0.1,0.9-0.2l25.9-15c0,0,0,0,0,0l0,0c0,0,0,0,0,0 c0,0,0.1-0.1,0.1-0.1c0,0,0,0,0.1,0c0,0,0.1-0.1,0.1-0.1c0,0,0,0,0.1-0.1c0,0,0.1-0.1,0.1-0.1c0-0.1,0.1-0.1,0.1-0.2c0,0,0,0,0,0 c0-0.1,0.1-0.1,0.1-0.2c0,0,0,0,0,0c0-0.1,0-0.1,0.1-0.2c0,0,0,0,0,0c0-0.1,0-0.1,0-0.2c0,0,0,0,0,0c0-0.1,0-0.1,0-0.2c0,0,0,0,0,0 V21.1c0-0.6-0.3-1.2-0.9-1.5L32.8,4.6z M33.7,25.5l10.7,18.6l-10.7,6.2V25.5z M7.7,22.1L30.1,9.2v9.2l-14.4,25L7.7,48V22.1z M30.1,25.5v24.8l-10.7-6.2L30.1,25.5z M31.9,64L9.5,51l7.5-4.3l14,8.1c0,0,0,0,0,0c0.1,0,0.1,0.1,0.2,0.1c0,0,0,0,0,0 c0.1,0,0.1,0,0.2,0.1c0,0,0,0,0.1,0c0.1,0,0.1,0,0.2,0c0,0,0,0,0.1,0c0.1,0,0.1,0,0.2,0c0.1,0,0.1,0,0.2,0c0,0,0,0,0.1,0 c0.1,0,0.1,0,0.2,0c0,0,0,0,0.1,0c0.1,0,0.1,0,0.2-0.1c0,0,0,0,0,0c0.1,0,0.1-0.1,0.2-0.1c0,0,0,0,0,0l14-8.1l7.5,4.3L31.9,64z M56,48l-7.9-4.6l-14.4-25V9.2L56,22.1V48z"
+                            />
+                        </svg>
+                    </div>
+                    <div class="logo-card-label">Ícone apenas</div>
+                    <p class="logo-card-usage">
+                        Favicon, avatares e aplicações onde o ícone isolado é
+                        suficiente.
+                    </p>
+                    <div class="logo-downloads">
+                        <a
+                            href="EDMTECH_logo_actual.svg"
+                            download
+                            class="link-small"
+                            >SVG</a
+                        >
+                        <a href="EDMTECH_logo.png" download class="link-small"
+                            >PNG</a
+                        >
+                    </div>
+                </div>
+
+                <!-- Pack de logos -->
+                <div class="logo-card" style="background: var(--gray-100); border-style: dashed;">
+                    <div class="logo-preview">
+                        <svg
+                            viewBox="0 0 64 64"
+                            xmlns="http://www.w3.org/2000/svg"
+                            style="max-height: 48px; width: auto;"
+                        >
+                            <rect x="4" y="12" width="56" height="40" rx="4" fill="none" stroke="#34BEE9" stroke-width="3"/>
+                            <path d="M4 24h56" stroke="#34BEE9" stroke-width="2"/>
+                            <circle cx="14" cy="18" r="2" fill="#34BEE9"/>
+                            <circle cx="22" cy="18" r="2" fill="#34BEE9"/>
+                            <path d="M24 38l8 8 8-8" stroke="#E74F3D" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M32 30v16" stroke="#E74F3D" stroke-width="3" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="logo-card-label">Pack Completo de Logos</div>
+                    <p class="logo-card-usage">
+                        Todos os formatos (SVG, PNG) + guia de aplicação em PDF.
+                    </p>
+                    <div class="logo-downloads">
+                        <a
+                            href="brand_docs/Logo/EDMTECH_Logo_Pack.zip"
+                            download
+                            class="link-small"
+                            >Descarregar pack</a
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <!-- Logo Usage Rules -->
+            <div class="logo-rules">
+                <div class="section-header" style="margin-bottom: 20px">
+                    <h2 style="font-size: 20px">Regras de Aplicação</h2>
+                    <p>
+                        Baseado no <em>Aplicação_Logo_2024.pdf</em> e diretrizes
+                        oficiais da marca.
+                    </p>
+                </div>
+
+                <div class="rules-grid">
+                    <!-- Clear Space -->
+                    <div class="rule-card">
+                        <h3>
+                            <span class="icon icon-info">i</span>Espaço de
+                            Resguardo
+                        </h3>
+                        <p
+                            style="
+                                font-size: 13px;
+                                color: var(--text-muted);
+                                margin-bottom: 14px;
+                                line-height: 1.6;
+                            "
+                        >
+                            Mantenha uma área livre equivalente à altura do
+                            ícone em todos os lados do logótipo. Nunca coloque
+                            elementos gráficos ou texto dentro desta zona.
+                        </p>
+                        <div class="clear-space-demo">
+                            <div class="clear-space-box">
+                                <svg
+                                    viewBox="0 0 300 72"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    style="
+                                        width: 160px;
+                                        height: auto;
+                                        display: block;
+                                        overflow: visible;
+                                    "
+                                >
+                                    <path
+                                        fill="#E74F3D"
+                                        d="M32.8,4.6C32.8,4.6,32.8,4.6,32.8,4.6c-0.1,0-0.1-0.1-0.2-0.1c0,0,0,0,0,0c-0.1,0-0.1,0-0.2-0.1c0,0,0,0-0.1,0 c-0.1,0-0.1,0-0.2,0c0,0,0,0-0.1,0c-0.1,0-0.1,0-0.2,0c-0.1,0-0.1,0-0.2,0c0,0,0,0-0.1,0c-0.1,0-0.1,0-0.2,0c0,0,0,0-0.1,0 c-0.1,0-0.1,0-0.2,0.1c0,0,0,0,0,0c-0.1,0-0.1,0.1-0.2,0.1c0,0,0,0,0,0l-25.9,15c-0.5,0.3-0.9,0.9-0.9,1.5V51c0,0,0,0,0,0 c0,0.1,0,0.1,0,0.2c0,0,0,0,0,0c0,0.1,0,0.1,0,0.2c0,0,0,0,0,0.1c0,0.1,0,0.1,0.1,0.2c0,0,0,0,0,0c0,0.1,0.1,0.1,0.1,0.2 c0,0,0,0,0,0c0,0.1,0.1,0.1,0.1,0.2c0,0,0.1,0.1,0.1,0.1c0,0,0,0.1,0.1,0.1c0,0,0.1,0.1,0.1,0.1c0,0,0,0,0.1,0c0,0,0.1,0.1,0.1,0.1 c0,0,0,0,0,0l0,0c0,0,0,0,0,0l25.9,15c0.3,0.2,0.6,0.2,0.9,0.2c0.3,0,0.6-0.1,0.9-0.2l25.9-15c0,0,0,0,0,0l0,0c0,0,0,0,0,0 c0,0,0.1-0.1,0.1-0.1c0,0,0,0,0.1,0c0,0,0.1-0.1,0.1-0.1c0,0,0,0,0.1-0.1c0,0,0.1-0.1,0.1-0.1c0-0.1,0.1-0.1,0.1-0.2c0,0,0,0,0,0 c0-0.1,0.1-0.1,0.1-0.2c0,0,0,0,0,0c0-0.1,0-0.1,0.1-0.2c0,0,0,0,0,0c0-0.1,0-0.1,0-0.2c0,0,0,0,0,0c0-0.1,0-0.1,0-0.2c0,0,0,0,0,0 V21.1c0-0.6-0.3-1.2-0.9-1.5L32.8,4.6z M33.7,25.5l10.7,18.6l-10.7,6.2V25.5z M7.7,22.1L30.1,9.2v9.2l-14.4,25L7.7,48V22.1z M30.1,25.5v24.8l-10.7-6.2L30.1,25.5z M31.9,64L9.5,51l7.5-4.3l14,8.1c0,0,0,0,0,0c0.1,0,0.1,0.1,0.2,0.1c0,0,0,0,0,0 c0.1,0,0.1,0,0.2,0.1c0,0,0,0,0.1,0c0.1,0,0.1,0,0.2,0c0,0,0,0,0.1,0c0.1,0,0.1,0,0.2,0c0.1,0,0.1,0,0.2,0c0,0,0,0,0.1,0 c0.1,0,0.1,0,0.2,0c0,0,0,0,0.1,0c0.1,0,0.1,0,0.2-0.1c0,0,0,0,0,0c0.1,0,0.1-0.1,0.2-0.1c0,0,0,0,0,0l14-8.1l7.5,4.3L31.9,64z M56,48l-7.9-4.6l-14.4-25V9.2L56,22.1V48z"
+                                    />
+                                    <path
+                                        fill="#E74F3D"
+                                        d="M190.5,23.4h13.6v4h-13.6v13.3c0,0.2,0.2,0.6,0.4,0.7l5,3.1c0.4,0.3,1.3,0.5,1.8,0.5h6.4v4h-6.4 c-1.2,0-2.9-0.5-3.9-1.1l-5-3.1c-1.3-0.8-2.3-2.5-2.3-4.1V19.4l4-1.2V23.4z M234.5,26.4l-9.2-3.1c-1.2-0.4-3-0.4-4.2,0l-9.2,3.1 c-1.6,0.5-2.8,2.2-2.8,3.9v10.5c0,1.5,0.9,3.2,2.2,4.1l4.4,2.9c1,0.7,2.7,1.2,3.9,1.2h15.8v-4h-15.8c-0.5,0-1.4-0.3-1.8-0.5 l-4.4-2.9c-0.2-0.1-0.4-0.5-0.4-0.7l0-10.5c0-0.1,0.1-0.2,0.1-0.2l9.2-3.1c0.4-0.1,1.3-0.1,1.7,0l9.2,3.1c0.1,0,0.1,0.1,0.1,0.2 v4.6h-14.9v4h15.4c2,0,3.6-1.6,3.6-3.5v-5C237.4,28.6,236.1,26.9,234.5,26.4z M97.4,26.4l-9.2-3.1c-1.2-0.4-3-0.4-4.2,0l-9.2,3.1 c-1.6,0.5-2.8,2.2-2.8,3.9v10.5c0,1.5,0.9,3.2,2.2,4.1l4.4,2.9c1,0.7,2.7,1.2,3.9,1.2h15.8v-4H82.4c-0.5,0-1.4-0.3-1.8-0.5 l-4.4-2.9c-0.2-0.1-0.4-0.5-0.4-0.7l0-10.5c0-0.1,0.1-0.2,0.1-0.2l9.2-3.1c0.4-0.1,1.3-0.1,1.7,0l9.2,3.1c0.1,0,0.1,0.1,0.1,0.2 v4.6H81.3v4h15.4c2,0,3.6-1.6,3.6-3.5v-5C100.2,28.6,99,26.9,97.4,26.4z M134,18.8v26.7c0,2-1.6,3.5-3.5,3.5h-14.7 c-1.3,0-3-0.6-4-1.4l-4.1-3.1c-1.2-0.9-2-2.6-2-4.1v-9.7c0-1.7,1.2-3.4,2.8-4l9.3-3.5c1.2-0.5,3-0.5,4.3-0.1l8.1,2.7v-6L134,18.8z M130,30.3l-9.3-3.2c-0.2-0.1-0.4-0.1-0.7-0.1c-0.3,0-0.7,0-0.9,0.1l-9.3,3.5c0,0-0.1,0.2-0.1,0.2l0,9.6c0,0.2,0.3,0.8,0.4,0.9 l4.1,3.1c0.3,0.3,1.1,0.5,1.6,0.5H130V30.3z M177.7,26.7l-4.1-2.8c-1.2-0.8-3.1-1.1-4.5-0.6l-9.2,3.3l-3.7-2.7 c-1.2-0.9-3.1-1.2-4.6-0.7l-7.6,2.8h-4v22.8h4V30.4l9-3.2c0.2-0.1,0.7,0,0.8,0.1l3.7,2.7c0.2,0.1,0.4,0.6,0.4,0.9v18.1h4V30.8 c0-0.2-0.1-0.4-0.1-0.6l8.6-3.1c0.2-0.1,0.7,0,0.9,0.1l4.1,2.8c0.2,0.1,0.4,0.6,0.4,0.8v18.1h4V30.8 C179.9,29.3,179,27.6,177.7,26.7z M257.1,45.2c-0.4,0.1-1.3,0.1-1.7,0l-8.4-3c-0.1,0-0.2-0.2-0.2-0.2l0-11.4c0-0.1,0.1-0.2,0.1-0.2 l8.4-3c0.3-0.1,1.1-0.1,1.5,0l7.1,2.9c0.1,0,0.2,0.2,0.2,0.3v6.4l4-1.2v-5.2c0-1.7-1.1-3.4-2.7-4l-7.1-2.9 c-1.2-0.5-3.1-0.5-4.3-0.1l-8.4,3c-1.6,0.6-2.8,2.3-2.8,4v11.4c0,1.7,1.2,3.4,2.8,4l8.4,3c0.7,0.2,1.5,0.4,2.3,0.4 c0.7,0,1.3-0.1,1.9-0.3l9.5-2.9v-4.2L257.1,45.2z M294.2,26.7l-4.8-2.9c-1.3-0.8-3.2-0.9-4.5-0.4l-6.5,2.5v-7l-4,1.2v28.8h4V30.2 l8-3c0.2-0.1,0.8,0,1,0.1l4.8,2.9c0.1,0.1,0.4,0.5,0.4,0.7v18.1h4V30.8C296.5,29.3,295.6,27.5,294.2,26.7z"
+                                    />
+                                </svg>
+                            </div>
+                            <p class="clear-space-caption">
+                                Clear space — área livre em torno do logótipo
+                            </p>
+                        </div>
+                        <p
+                            style="
+                                font-size: 12px;
+                                color: var(--gray-300);
+                                text-align: center;
+                            "
+                        >
+                            Regra prática: margem livre ≥ altura do ícone em
+                            todos os lados
+                        </p>
+                    </div>
+
+                    <!-- Minimum sizes -->
+                    <div class="rule-card">
+                        <h3>
+                            <span class="icon icon-info">i</span>Tamanhos
+                            Mínimos
+                        </h3>
+                        <table class="compat-table">
+                            <tr>
+                                <th>Formato</th>
+                                <th>Largura mín.</th>
+                                <th>Notas</th>
+                            </tr>
+                            <tr>
+                                <td><strong>Logótipo completo</strong></td>
+                                <td>120 px</td>
+                                <td>Web</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Logótipo completo</strong></td>
+                                <td>30 mm</td>
+                                <td>Print</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ícone apenas</strong></td>
+                                <td>32 px</td>
+                                <td>App icon / avatar</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ícone apenas</strong></td>
+                                <td>16 px</td>
+                                <td>Favicon</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Do / Don't -->
+                <div style="margin-top: 24px">
+                    <h3
+                        style="
+                            font-size: 14px;
+                            font-weight: 600;
+                            color: var(--text-main);
+                            margin-bottom: 14px;
+                        "
+                    >
+                        O que fazer e evitar
+                    </h3>
+                    <div class="do-dont-grid">
+                        <div class="do-dont-item do">
+                            <div class="do-dont-title do"><span class="icon icon-good">&#10003;</span>Fazer</div>
+                            <div class="do-dont-desc">
+                                Usar o SVG oficial. Manter a proporção.
+                                Respeitar o espaço de resguardo. Garantir
+                                contraste suficiente. Usar ícone isolado para
+                                favicon e avatares.
+                            </div>
+                        </div>
+                        <div class="do-dont-item dont">
+                            <div class="do-dont-title dont"><span class="icon icon-bad">&#10005;</span>Evitar</div>
+                            <div class="do-dont-desc">
+                                Distorcer, rodar, redesenhar, aplicar sombras ou
+                                gradientes, alterar cores do ícone (#E74F3D) ou
+                                do texto (#E5E7EB), usar versões de baixa
+                                resolução.
+                            </div>
+                        </div>
+                        <div class="do-dont-item do">
+                            <div class="do-dont-title do"><span class="icon icon-good">&#10003;</span>Fazer</div>
+                            <div class="do-dont-desc">
+                                Mudar para a variante de maior contraste sempre
+                                que houver dúvida sobre legibilidade.
+                            </div>
+                        </div>
+                        <div class="do-dont-item dont">
+                            <div class="do-dont-title dont"><span class="icon icon-bad">&#10005;</span>Evitar</div>
+                            <div class="do-dont-desc">
+                                Posicionar o logótipo sobre zonas de imagem com
+                                muito ruído ou contraste irregular sem
+                                sobreposição de cor sólida.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vídeos Institucionais -->
+        <section class="section" id="modelos">
+            <div class="section-header" data-num="02">
+                <div
+                    class="section-label"
+                    style="display: flex; align-items: center; gap: 8px"
+                >
+                    <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                    >
+                        <path
+                            d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"
+                        />
+                        <polyline points="14 2 14 8 20 8" />
+                    </svg>
+                    Modelos
+                </div>
+                <h2>Documentos da Marca</h2>
+                <p>
+                    Modelos organizados por tipo. Cada categoria inclui
+                    variações para diferentes contextos de uso.
+                </p>
+            </div>
+
+            <div class="template-category">
+                <div class="template-category-header">
+                    <div
+                        class="template-category-icon"
+                        style="
+                            background: rgba(52, 190, 233, 0.1);
+                            color: var(--teal);
+                        "
+                    >
+                        <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                            <path d="M3 9h18" />
+                            <path d="M9 21V9" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3>Google Slides</h3>
+                        <p>
+                            Apresentações com diapositivos-mestre EDMTECH
+                            pré-definidos.
+                        </p>
+                    </div>
+                </div>
+                <div class="templates-subgrid">
+                    <div class="template-subcard">
+                        <h4>Apresentação da Empresa</h4>
+                        <p>
+                            Template institucional para pitches e reuniões de
+                            apresentação.
+                        </p>
+                        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                            <a
+                                href="https://docs.google.com/presentation/d/1ySd2WSyLm67lpmkWeCwpTB0m8izPAHzw7_CXggaueHc/edit?usp=sharing"
+                                target="_blank"
+                                class="template-link"
+                                >PT<svg
+                                    width="12"
+                                    height="12"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <path
+                                        d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"
+                                    />
+                                    <polyline points="15 3 21 3 21 9" />
+                                    <line x1="10" y1="14" x2="21" y2="3" /></svg
+                            ></a>
+                            <a
+                                href="https://docs.google.com/presentation/d/1SvlV_QLgIYvvqELWN62t7FnyUAPmfjCJh5dpwOr99N4/edit?usp=sharing"
+                                target="_blank"
+                                class="template-link"
+                                >EN<svg
+                                    width="12"
+                                    height="12"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <path
+                                        d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"
+                                    />
+                                    <polyline points="15 3 21 3 21 9" />
+                                    <line x1="10" y1="14" x2="21" y2="3" /></svg
+                            ></a>
+                        </div>
+                    </div>
+                    <div class="template-subcard">
+                        <h4>Template Genérico</h4>
+                        <p>
+                            Base limpa para criar apresentações específicas por
+                            projeto.
+                        </p>
+                        <a
+                            href="https://docs.google.com/presentation/d/14xfWOBPuihtVkY_8Q3RCY4k7jcvPgDIxePmd0X8-F0E/edit?usp=sharing"
+                            target="_blank"
+                            class="template-link"
+                            >Abrir modelo<svg
+                                width="12"
+                                height="12"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path
+                                    d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"
+                                />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" /></svg
+                        ></a>
+                    </div>
+                    <div class="template-subcard">
+                        <h4>Proposta Comercial</h4>
+                        <p>
+                            Estrutura para propostas técnicas e comerciais com
+                            estimativas.
+                        </p>
+                        <a
+                            href="https://docs.google.com/presentation/d/PLACEHOLDER_PROPOSAL"
+                            target="_blank"
+                            class="template-link"
+                            >Abrir modelo<svg
+                                width="12"
+                                height="12"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path
+                                    d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"
+                                />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" /></svg
+                        ></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="template-category">
+                <div class="template-category-header">
+                    <div
+                        class="template-category-icon"
+                        style="
+                            background: rgba(52, 190, 233, 0.1);
+                            color: var(--teal);
+                        "
+                    >
+                        <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <path
+                                d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"
+                            />
+                            <polyline points="14 2 14 8 20 8" />
+                            <line x1="16" y1="13" x2="8" y2="13" />
+                            <line x1="16" y1="17" x2="8" y2="17" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3>Google Docs</h3>
+                        <p>
+                            Documentos de texto com estilos tipográficos e
+                            cabeçalhos da marca.
+                        </p>
+                    </div>
+                </div>
+                <div class="templates-subgrid">
+                    <div class="template-subcard">
+                        <h4>Modelo A4 Genérico</h4>
+                        <p>
+                            Documento base para memorandos, relatórios e notas
+                            internas.
+                        </p>
+                        <a
+                            href="https://docs.google.com/document/d/1F4-BYOeQV2FP3uFcfeKsPiq1yWIGGl7u3BGNM7yvDck/edit?usp=sharing"
+                            target="_blank"
+                            class="template-link"
+                            >Abrir modelo<svg
+                                width="12"
+                                height="12"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path
+                                    d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"
+                                />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" /></svg
+                        ></a>
+                    </div>
+                    <div class="template-subcard">
+                        <h4>Proposta de Orçamento</h4>
+                        <p>
+                            Estrutura formal para propostas com escopo, preços e
+                            termos.
+                        </p>
+                        <a
+                            href="https://docs.google.com/document/d/PLACEHOLDER_BUDGET"
+                            target="_blank"
+                            class="template-link"
+                            >Abrir modelo<svg
+                                width="12"
+                                height="12"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path
+                                    d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"
+                                />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" /></svg
+                        ></a>
+                    </div>
+                    <div class="template-subcard">
+                        <h4>Documentação Técnica</h4>
+                        <p>
+                            Template para especificações, manuais e relatórios
+                            técnicos.
+                        </p>
+                        <a
+                            href="https://docs.google.com/document/d/PLACEHOLDER_TECH"
+                            target="_blank"
+                            class="template-link"
+                            >Abrir modelo<svg
+                                width="12"
+                                height="12"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path
+                                    d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"
+                                />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" /></svg
+                        ></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="template-category">
+                <div class="template-category-header">
+                    <div
+                        class="template-category-icon"
+                        style="
+                            background: rgba(52, 190, 233, 0.1);
+                            color: var(--teal);
+                        "
+                    >
+                        <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                            <path d="M3 9h18" />
+                            <path d="M3 15h18" />
+                            <path d="M9 3v18" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3>Google Sheets</h3>
+                        <p>
+                            Folhas de cálculo com formatação de cor e estrutura
+                            EDMTECH.
+                        </p>
+                    </div>
+                </div>
+                <div class="templates-subgrid">
+                    <div class="template-subcard">
+                        <h4>Orçamento</h4>
+                        <p>
+                            Planilha estruturada para estimativas de projetos e
+                            BOM.
+                        </p>
+                        <a
+                            href="https://docs.google.com/spreadsheets/d/PLACEHOLDER_BUDGET_SHEET"
+                            target="_blank"
+                            class="template-link"
+                            >Abrir modelo<svg
+                                width="12"
+                                height="12"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path
+                                    d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"
+                                />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" /></svg
+                        ></a>
+                    </div>
+                    <div class="template-subcard">
+                        <h4>Seguimento de Projeto</h4>
+                        <p>Gantt simplificado e dashboard de milestones.</p>
+                        <a
+                            href="https://docs.google.com/spreadsheets/d/PLACEHOLDER_PROJECT"
+                            target="_blank"
+                            class="template-link"
+                            >Abrir modelo<svg
+                                width="12"
+                                height="12"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path
+                                    d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"
+                                />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" /></svg
+                        ></a>
+                    </div>
+                    <div class="template-subcard">
+                        <h4>Planeamento de Recursos</h4>
+                        <p>Alocação de equipas e capacidade por projeto.</p>
+                        <a
+                            href="https://docs.google.com/spreadsheets/d/PLACEHOLDER_RESOURCES"
+                            target="_blank"
+                            class="template-link"
+                            >Abrir modelo<svg
+                                width="12"
+                                height="12"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path
+                                    d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"
+                                />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" /></svg
+                        ></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="template-category">
+                <div class="template-category-header">
+                    <div
+                        class="template-category-icon"
+                        style="
+                            background: rgba(231, 79, 61, 0.1);
+                            color: var(--red);
+                        "
+                    >
+                        <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <path
+                                d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"
+                            />
+                            <polyline points="14 2 14 8 20 8" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3>Referência</h3>
+                        <p>
+                            Documentos oficiais de marca para consulta e
+                            distribuição.
+                        </p>
+                    </div>
+                </div>
+                <div class="templates-subgrid">
+                    <div class="template-subcard">
+                        <h4>Diretrizes de Marca (PDF)</h4>
+                        <p>
+                            Documento completo com uso do logótipo,
+                            especificações de cor e exemplos.
+                        </p>
+                        <a
+                            href="https://drive.google.com/file/d/1YsmVJhm0Hzth88YI2tnkiXyPdkm3NkzR/view?usp=drive_link"
+                            target="_blank"
+                            class="template-link"
+                            >Ver PDF<svg
+                                width="12"
+                                height="12"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path
+                                    d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"
+                                />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" /></svg
+                        ></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="cores">
+            <div class="section-header" data-num="03">
+                <div
+                    class="section-label"
+                    style="display: flex; align-items: center; gap: 8px"
+                >
+                    <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                    >
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 2a14.5 14.5 0 010 20 14.5 14.5 0 010-20" />
+                    </svg>
+                    Paleta de Cores
+                </div>
+                <h2>Cores da Marca</h2>
+                <p>
+                    Clique em qualquer amostra para copiar o código HEX. As
+                    cores primárias definem a energia da marca: o vermelho para
+                    acentos e calls-to-action, o azul claro para ambientes
+                    digitais e backgrounds.
+                </p>
+            </div>
+
+            <div class="color-category">
+                <div class="color-category-label primary">Primárias</div>
+                <div class="colors-grid">
+                    <div
+                        class="color-card"
+                        data-color="#E74F3D"
+                        onclick="copyColor(this)"
+                    >
+                        <div
+                            class="color-swatch"
+                            style="background: #e74f3d"
+                        >
+                            <div class="swatch-content">
+                                <span class="swatch-code">#E74F3D</span>
+                                <span class="swatch-copy">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                                        <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="color-info">
+                            <div class="color-name">Vermelho EDM</div>
+                            <div class="color-usage">
+                                Acentos, CTAs, energia, ênfase. Cor principal da
+                                marca.
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="color-card"
+                        data-color="#34BEE9"
+                        onclick="copyColor(this)"
+                    >
+                        <div
+                            class="color-swatch"
+                            style="background: #34bee9"
+                        >
+                            <div class="swatch-content">
+                                <span class="swatch-code">#34BEE9</span>
+                                <span class="swatch-copy">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                                        <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="color-info">
+                            <div class="color-name">Azul Claro</div>
+                            <div class="color-usage">
+                                Backgrounds digitais, UI, interação, estados
+                                ativos.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="color-category">
+                <div class="color-category-label secondary">Secundárias</div>
+                <div class="colors-grid">
+                    <div
+                        class="color-card"
+                        data-color="#EE6A30"
+                        onclick="copyColor(this)"
+                    >
+                        <div
+                            class="color-swatch"
+                            style="background: #ee6a30"
+                        >
+                            <div class="swatch-content">
+                                <span class="swatch-code">#EE6A30</span>
+                                <span class="swatch-copy">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                                        <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="color-info">
+                            <div class="color-name">Laranja EDM</div>
+                            <div class="color-usage">
+                                Desenvolvimento, prototipagem, transição
+                                térmica/energia.
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="color-card"
+                        data-color="#8FE0FF"
+                        onclick="copyColor(this)"
+                    >
+                        <div
+                            class="color-swatch"
+                            style="background: #8fe0ff"
+                        >
+                            <div class="swatch-content">
+                                <span class="swatch-code">#8FE0FF</span>
+                                <span class="swatch-copy">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                                        <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="color-info">
+                            <div class="color-name">Azul Muito Claro</div>
+                            <div class="color-usage">
+                                Iluminação, glows, hover states, smart cities,
+                                mobilidade.
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="color-card"
+                        data-color="#197799"
+                        onclick="copyColor(this)"
+                    >
+                        <div
+                            class="color-swatch"
+                            style="background: #197799"
+                        >
+                            <div class="swatch-content">
+                                <span class="swatch-code">#197799</span>
+                                <span class="swatch-copy">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                                        <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="color-info">
+                            <div class="color-name">Azul Escuro</div>
+                            <div class="color-usage">
+                                Profundidade, estabilidade, documentação
+                                técnica.
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="color-card"
+                        data-color="#014354"
+                        onclick="copyColor(this)"
+                    >
+                        <div
+                            class="color-swatch"
+                            style="background: #014354"
+                        >
+                            <div class="swatch-content">
+                                <span class="swatch-code">#014354</span>
+                                <span class="swatch-copy">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                                        <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="color-info">
+                            <div class="color-name">Azul Profundo</div>
+                            <div class="color-usage">
+                                Headers, contrastes fortes, elementos de peso.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="color-category">
+                <div class="color-category-label neutrals">Neutros Escuros</div>
+                <div class="colors-grid">
+                    <div
+                        class="color-card"
+                        data-color="#0B0E15"
+                        onclick="copyColor(this)"
+                    >
+                        <div
+                            class="color-swatch"
+                            style="background: #0b0e15"
+                        >
+                            <div class="swatch-content">
+                                <span class="swatch-code">#0B0E15</span>
+                                <span class="swatch-copy">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                                        <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="color-info">
+                            <div class="color-name">Naval</div>
+                            <div class="color-usage">
+                                Backgrounds de secção, profundidade suave.
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="color-card"
+                        data-color="#00263E"
+                        onclick="copyColor(this)"
+                    >
+                        <div
+                            class="color-swatch"
+                            style="background: #00263e"
+                        >
+                            <div class="swatch-content">
+                                <span class="swatch-code">#00263E</span>
+                                <span class="swatch-copy">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                                        <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="color-info">
+                            <div class="color-name">Azul Naval</div>
+                            <div class="color-usage">
+                                Footers, blocos institucionais, fundos de peso.
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="color-card"
+                        data-color="#171717"
+                        onclick="copyColor(this)"
+                    >
+                        <div
+                            class="color-swatch"
+                            style="background: #171717"
+                        >
+                            <div class="swatch-content">
+                                <span class="swatch-code">#171717</span>
+                                <span class="swatch-copy">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                                        <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="color-info">
+                            <div class="color-name">Cinzento Escuro</div>
+                            <div class="color-usage">
+                                Cards, superfícies elevadas, containers.
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="color-card"
+                        data-color="#4D4D4D"
+                        onclick="copyColor(this)"
+                    >
+                        <div
+                            class="color-swatch"
+                            style="background: #4d4d4d"
+                        >
+                            <div class="swatch-content">
+                                <span class="swatch-code">#4D4D4D</span>
+                                <span class="swatch-copy">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                                        <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="color-info">
+                            <div class="color-name">Cinzento Médio</div>
+                            <div class="color-usage">
+                                Corpo de texto em fundos claros, bordas
+                                secundárias.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="color-category">
+                <div class="color-category-label neutrals">Neutros Claros</div>
+                <div class="colors-grid">
+                    <div
+                        class="color-card"
+                        data-color="#E5E7EB"
+                        onclick="copyColor(this)"
+                    >
+                        <div
+                            class="color-swatch swatch-light"
+                            style="background: #e5e7eb"
+                        >
+                            <div class="swatch-content">
+                                <span class="swatch-code">#E5E7EB</span>
+                                <span class="swatch-copy">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                                        <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="color-info">
+                            <div class="color-name">Cinzento Claro</div>
+                            <div class="color-usage">
+                                Texto em fundos escuros, bordas sutis, texto
+                                logótipo.
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="color-card"
+                        data-color="#FFFFFF"
+                        onclick="copyColor(this)"
+                    >
+                        <div
+                            class="color-swatch swatch-light"
+                            style="background: #ffffff"
+                        >
+                            <div class="swatch-content">
+                                <span class="swatch-code">#FFFFFF</span>
+                                <span class="swatch-copy">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                                        <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="color-info">
+                            <div class="color-name">Branco</div>
+                            <div class="color-usage">
+                                Títulos, contraste máximo, espaço negativo.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Logo -->
+        <section class="section" id="tipografia">
+            <div class="section-header" data-num="04">
+                <div
+                    class="section-label"
+                    style="display: flex; align-items: center; gap: 8px"
+                >
+                    <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                    >
+                        <path d="M4 7V4h16v3" />
+                        <path d="M9 20h6" />
+                        <path d="M12 4v16" />
+                    </svg>
+                    Tipografia
+                </div>
+                <h2>Tipo de Letra Sora</h2>
+                <p>
+                    A EDMTECH utiliza Sora em todos os pontos de contacto.
+                    Carregue-a a partir do Google Fonts ou aloje-a internamente.
+                    Não utilize itálicos — use pesos diferentes para hierarquia.
+                </p>
+            </div>
+            <div class="type-showcase">
+                <div class="type-row">
+                    <div
+                        class="type-sample"
+                        style="font-weight: 700; font-size: 28px"
+                    >
+                        Título Bold
+                    </div>
+                    <div class="type-meta">
+                        <strong>700 Negrito</strong><br />28px / 1.2
+                    </div>
+                </div>
+                <div class="type-row">
+                    <div
+                        class="type-sample"
+                        style="font-weight: 600; font-size: 20px"
+                    >
+                        Título Semi-negrito
+                    </div>
+                    <div class="type-meta">
+                        <strong>600 Semi-negrito</strong><br />20px / 1.3
+                    </div>
+                </div>
+                <div class="type-row">
+                    <div
+                        class="type-sample"
+                        style="font-weight: 500; font-size: 16px"
+                    >
+                        Título Médio
+                    </div>
+                    <div class="type-meta">
+                        <strong>500 Médio</strong><br />16px / 1.4
+                    </div>
+                </div>
+                <div class="type-row">
+                    <div
+                        class="type-sample"
+                        style="font-weight: 400; font-size: 15px"
+                    >
+                        Corpo Normal — Sora tem x-height grande, por isso use
+                        altura de linha generosa em textos corridos e
+                        documentação técnica.
+                    </div>
+                    <div class="type-meta">
+                        <strong>400 Normal</strong><br />15px / 1.6
+                    </div>
+                </div>
+                <div class="type-row">
+                    <div
+                        class="type-sample"
+                        style="font-weight: 300; font-size: 13px"
+                    >
+                        Peso leve para legendas, etiquetas e metadados
+                        secundários em interfaces.
+                    </div>
+                    <div class="type-meta">
+                        <strong>300 Leve</strong><br />13px / 1.5
+                    </div>
+                </div>
+            </div>
+            <div
+                style="
+                    margin-top: 20px;
+                    display: flex;
+                    gap: 10px;
+                    flex-wrap: wrap;
+                "
+            >
+                <a
+                    href="https://fonts.google.com/specimen/Sora"
+                    target="_blank"
+                    class="template-link"
+                >
+                    Google Fonts — Sora
+                    <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <path
+                            d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"
+                        />
+                        <polyline points="15 3 21 3 21 9" />
+                        <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                </a>
+                <a
+                    href="https://github.com/sora-xor/sora-font"
+                    target="_blank"
+                    class="template-link"
+                >
+                    Alojamento próprio (GitHub)
+                    <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <path
+                            d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"
+                        />
+                        <polyline points="15 3 21 3 21 9" />
+                        <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="voice-grid" style="margin-top: 24px;">
+                <div class="voice-card">
+                    <h4 style="font-size: 14px; font-weight: 600; color: var(--text-main); margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Como instalar
+                    </h4>
+                    <ol style="font-size: 13px; color: var(--text-muted); line-height: 1.7; padding-left: 16px; margin: 0;">
+                        <li>Descarregue os ficheiros da fonte (TTF ou OTF).</li>
+                        <li><strong>Windows:</strong> clique direito no ficheiro → <em>Install</em> (ou instalar para todos os utilizadores).</li>
+                        <li><strong>macOS:</strong> clique duplo no ficheiro → <em>Install Font</em>.</li>
+                        <li>Reinicie as aplicações onde pretende usar a fonte.</li>
+                    </ol>
+                </div>
+                <div class="voice-card">
+                    <h4 style="font-size: 14px; font-weight: 600; color: var(--text-main); margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        Como usar em documentos
+                    </h4>
+                    <ul style="font-size: 13px; color: var(--text-muted); line-height: 1.7; padding-left: 16px; margin: 0; list-style: none;">
+                        <li style="padding: 2px 0;"><strong>Google Docs/Slides:</strong> Sora já está disponível na lista de fontes do Google Workspace.</li>
+                        <li style="padding: 2px 0;"><strong>Microsoft Office:</strong> selecione <em>Sora</em> na lista de fontes após instalação.</li>
+                        <li style="padding: 2px 0;"><strong>Adobe:</strong> ative a fonte no <em>Adobe Fonts</em> ou instale localmente.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Templates -->
+        <section class="section" id="videos">
+            <div class="section-header" data-num="05">
+                <div
+                    class="section-label"
+                    style="display: flex; align-items: center; gap: 8px"
+                >
+                    <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                    >
+                        <polygon points="23 7 16 12 23 17 23 7" />
+                        <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+                    </svg>
+                    Vídeos
+                </div>
+                <h2>Vídeos Institucionais</h2>
+                <p>
+                    Vídeos da marca para uso em apresentações, site e redes sociais.
+                </p>
+            </div>
+            <div class="templates-grid">
+                <div class="template-card">
+                    <div
+                        class="template-icon"
+                        style="background: rgba(52, 190, 233, 0.1); color: var(--teal);"
+                    >
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                            <line x1="8" y1="21" x2="16" y2="21" />
+                            <line x1="12" y1="17" x2="12" y2="21" />
+                        </svg>
+                    </div>
+                    <h3>Vídeo Horizontal</h3>
+                    <p>
+                        Formato 16:9 para site, apresentações e YouTube.
+                    </p>
+                    <a href="#" target="_blank" class="template-link">
+                        Ver vídeo
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                            <polyline points="15 3 21 3 21 9" />
+                            <line x1="10" y1="14" x2="21" y2="3" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="template-card">
+                    <div
+                        class="template-icon"
+                        style="background: rgba(231, 79, 61, 0.1); color: var(--red);"
+                    >
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                            <line x1="12" y1="18" x2="12" y2="18.01" />
+                        </svg>
+                    </div>
+                    <h3>Vídeo Vertical</h3>
+                    <p>
+                        Formato 9:16 para Instagram Reels, TikTok e Stories.
+                    </p>
+                    <a href="#" target="_blank" class="template-link">
+                        Ver vídeo
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                            <polyline points="15 3 21 3 21 9" />
+                            <line x1="10" y1="14" x2="21" y2="3" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Voice & Tone -->
+        <section class="section" id="voz">
+            <div class="section-header" data-num="06">
+                <div
+                    class="section-label"
+                    style="display: flex; align-items: center; gap: 8px"
+                >
+                    <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                    >
+                        <path
+                            d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"
+                        />
+                    </svg>
+                    Voz e Tom
+                </div>
+                <h2>Comunicar como EDMTECH</h2>
+                <p>
+                    A voz da marca é sempre a mesma; o tom adapta-se ao canal e
+                    ao contexto. Baseado nas diretrizes oficiais da marca.
+                </p>
+            </div>
+
+            <div class="voice-grid">
+                <div class="voice-card">
+                    <h4>Técnica e clara</h4>
+                    <p>
+                        Linguagem direta, sem "marketing vazio". Preferimos
+                        dados, requisitos e resultados a adjetivos vagos.
+                    </p>
+                </div>
+                <div class="voice-card">
+                    <h4>Concreta</h4>
+                    <p>
+                        Exemplos, métricas e limites quando necessário. Não
+                        prometemos o impossível — especificamos o alcancável.
+                    </p>
+                </div>
+                <div class="voice-card">
+                    <h4>Segura e responsável</h4>
+                    <p>
+                        Priorizamos a precisão técnica. Claims de segurança,
+                        performance e conformidade só com lastro interno.
+                    </p>
+                </div>
+                <div class="voice-card">
+                    <h4>Arrojada</h4>
+                    <p>
+                        Não há problemas, há desafios. Questionamos "porquê" e
+                        perguntamos "porque não". First principles.
+                    </p>
+                </div>
+                <div class="voice-card">
+                    <h4>Colaborativa</h4>
+                    <p>
+                        Usamos "nós", "definimos", "validamos", "implementamos".
+                        Referimo-nos a parceiros em vez de "clientes" e
+                        "fornecedores".
+                    </p>
+                </div>
+            </div>
+
+            <div class="section-header" style="margin-bottom: 20px">
+                <h2 style="font-size: 20px">Tom por canal</h2>
+            </div>
+            <div class="tone-table-wrap">
+                <table class="tone-table">
+                    <tr>
+                        <th>Canal</th>
+                        <th>Tom</th>
+                        <th>Exemplo de abordagem</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Website / Marketing</strong></td>
+                        <td>
+                            Curto, confiante, orientado a benefícios + prova
+                        </td>
+                        <td>
+                            "Sistemas de armazenamento industrial desenhados
+                            para fiabilidade e integração."
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Propostas / B2B</strong></td>
+                        <td>Estruturado, rigoroso, com entregáveis e riscos</td>
+                        <td>
+                            Especificar arquitetura, cronograma, validações e
+                            condicionantes.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Documentação técnica</strong></td>
+                        <td>Neutro, factual, com definições e condições</td>
+                        <td>
+                            Usar siglas só após primeira explicação (ex.:
+                            "Battery Management System (BMS)").
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Redes sociais</strong></td>
+                        <td>Humano e simples, mas profissional e educativo</td>
+                        <td>
+                            Partilhar processo, pormenores de engenharia e
+                            "behind the scenes".
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Suporte / Pós-venda</strong></td>
+                        <td>Calmo, objetivo, resposta inicial rápida</td>
+                        <td>
+                            Foco em diagnóstico e próximos passos concretos.
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="section-header" style="margin-bottom: 20px">
+                <h2 style="font-size: 20px">"Nunca usar" — com alternativas</h2>
+            </div>
+            <div class="never-say-grid">
+                <div class="never-say-card">
+                    <h4><span class="icon icon-bad">&#10005;</span>Preço e posicionamento</h4>
+                    <ul class="never-say-list">
+                        <li>"barato", "preço imbatível", "low-cost"</li>
+                        <li>"económico" como posicionamento principal</li>
+                    </ul>
+                    <div class="never-say-alt">
+                        <strong>Alternativas:</strong> "cost design",
+                        "configuração otimizada para custo", "proposta ajustada
+                        ao orçamento", "melhor relação custo-benefício para os
+                        requisitos".
+                    </div>
+                </div>
+                <div class="never-say-card">
+                    <h4><span class="icon icon-bad">&#10005;</span>Promessas absolutas / risco técnico</h4>
+                    <ul class="never-say-list">
+                        <li>"100% seguro", "nunca falha", "sem risco"</li>
+                        <li>"zero manutenção", "compatível com tudo"</li>
+                        <li>
+                            "universal", "plug-and-play para qualquer aplicação"
+                        </li>
+                    </ul>
+                    <div class="never-say-alt">
+                        <strong>Alternativas:</strong> "desenhado para…",
+                        "validado para…", "conforme requisitos definidos",
+                        "compatível com [sistemas]" + condições claras.
+                    </div>
+                </div>
+                <div class="never-say-card">
+                    <h4><span class="icon icon-bad">&#10005;</span>Superlativos sem prova</h4>
+                    <ul class="never-say-list">
+                        <li>"o melhor do mercado"</li>
+                        <li>"o mais avançado"</li>
+                        <li>"líder de mercado" (sem evidência)</li>
+                    </ul>
+                    <div class="never-say-alt">
+                        <strong>Alternativas:</strong> "desempenho otimizado
+                        para [métrica]", "arquitetura focada em [benefício]",
+                        "experiência comprovada em [contexto]".
+                    </div>
+                </div>
+                <div class="never-say-card">
+                    <h4><span class="icon icon-bad">&#10005;</span>Conformidade e certificações</h4>
+                    <ul class="never-say-list">
+                        <li>"certificado" sem especificar âmbito</li>
+                        <li>"conforme norma X" sem evidência</li>
+                    </ul>
+                    <div class="never-say-alt">
+                        <strong>Alternativas:</strong> "desenvolvido com
+                        requisitos de [norma] em mente", "processo de validação
+                        e documentação para [norma]" (se aplicável).
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 32px">
+                <div class="checklist">
+                    <h3>Checklist antes de publicar</h3>
+                    <ul style="grid-template-columns: 1fr;">
+                        <li>Logótipo correto e legível no fundo escolhido</li>
+                        <li>Cores oficiais e contraste OK</li>
+                        <li>
+                            Sora aplicada corretamente (sem itálico forçado)
+                        </li>
+                        <li>Mensagem coerente com edm.labs + edm.batteries</li>
+                        <li>Sem "Never Say" e sem claims não validadas</li>
+                        <li>Claims técnicos validados com equipa técnica</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photography & Imagery -->
+        <section class="section" id="fotografia">
+            <div class="section-header" data-num="07">
+                <div
+                    class="section-label"
+                    style="display: flex; align-items: center; gap: 8px"
+                >
+                    <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                    >
+                        <rect x="3" y="3" width="18" height="18" rx="2" />
+                        <circle cx="8.5" cy="8.5" r="1.5" />
+                        <path d="M21 15l-5-5L5 21" />
+                    </svg>
+                    Fotografia e Imagem
+                </div>
+                <h2>Direção de Imagem</h2>
+                <p>
+                    A EDMTECH comunica precisão técnica com escala humana. A
+                    direção de imagem deve sentir-se europeia, moderna e
+                    intencional — nunca genérica.
+                </p>
+            </div>
+
+            <div class="photo-grid">
+                <div class="photo-card">
+                    <h4><span class="icon icon-good">&#10003;</span>O que privilegiar</h4>
+                    <ul>
+                        <li>
+                            Produto real em contexto real (labs, linha de
+                            montagem, veículo)
+                        </li>
+                        <li>
+                            Iluminação natural ou controlada, nunca flash direto
+                            a apontar para componentes
+                        </li>
+                        <li>
+                            Pormenor técnico com propósito: cablagem organizada,
+                            interface de testes, integração mecânica
+                        </li>
+                        <li>
+                            Ambientes de trabalho limpos e ordenados — a
+                            "oficina" é parte da marca
+                        </li>
+                        <li>
+                            Pessoas em ação: mãos a trabalhar, equipas em
+                            revisão técnica, discussão de especificações
+                        </li>
+                    </ul>
+                </div>
+                <div class="photo-card photo-dont">
+                    <h4><span class="icon icon-bad">&#10005;</span>O que evitar</h4>
+                    <ul>
+                        <li>
+                            Imagens genéricas de stock com aspeto artificial ou
+                            "smiling engineer with tablet"
+                        </li>
+                        <li>
+                            Efeitos e filtros pesados que destruam leitura e
+                            credibilidade
+                        </li>
+                        <li>
+                            Fotos com distorção de perspetiva exagerada (lentes
+                            wide-angle descontroladas)
+                        </li>
+                        <li>
+                            Produtos isolados em fundo branco infinito sem
+                            contexto — preferir ambientação suave
+                        </li>
+                        <li>
+                            Gradientes e overlays que escondam o sujeito; o
+                            overlay deve realçar, não mascarar
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="photo-grid">
+                <div class="photo-card">
+                    <h4>Hero / Ambient</h4>
+                    <p>
+                        Grandes planos de infraestrutura energética, detalhes
+                        arquitetónicos de instalações industriais, ou abstrações
+                        de luz e movimento. A cor dominante deve ser o azul-teal
+                        (#34BEE9) em tons escuros, com o vermelho (#E74F3D) como
+                        ponto de acento luminoso — nunca como fundo dominante.
+                    </p>
+                    <div class="grade-specs">
+                        <strong>Cor:</strong> cool, ligeiramente desaturado
+                        (-10%)<br />
+                        <strong>Contraste:</strong> médio-alto, sombras
+                        profundas com detalhe<br />
+                        <strong>Overlay:</strong> gradiente sutil escuro →
+                        transparente, 20–40% opacidade<br />
+                        <strong>Texto:</strong> sempre com contraste WCAG AA
+                        mínimo
+                    </div>
+                </div>
+                <div class="photo-card">
+                    <h4>Produto / Técnico</h4>
+                    <p>
+                        Close-ups de baterias, PCBs, BMS, torres de
+                        carregamento. A luz deve revelar textura — metal,
+                        plástico técnico, etiquetas de série. Evitar reflexos
+                        cegos. Fundo preferencialmente escuro ou da paleta de
+                        neutros.
+                    </p>
+                    <div class="grade-specs">
+                        <strong>Cor:</strong> neutra, ligeiramente cool<br />
+                        <strong>Profundidade:</strong> shallow DOF para isolar o
+                        componente relevante<br />
+                        <strong>Cantos:</strong> border-radius 12–16px em
+                        digital<br />
+                        <strong>Formato:</strong> 4:3 ou 16:9 consoante o layout
+                    </div>
+                </div>
+                <div class="photo-card">
+                    <h4>Pessoas / Processo</h4>
+                    <p>
+                        Documentar o processo: prototipagem, testes de
+                        validação, reuniões de engenharia. Rosto opcional — o
+                        foco é o trabalho e a colaboração. Evitar poses
+                        forçadas.
+                    </p>
+                    <div class="grade-specs">
+                        <strong>Cor:</strong> natural, com ligeiro desvio para
+                        cool<br />
+                        <strong>Composição:</strong> regra dos terços, sujeito
+                        descentrado<br />
+                        <strong>Consistência:</strong> mesmo tratamento de cor
+                        em todas as fotos de uma campanha
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 8px">
+                <div class="checklist">
+                    <h3>Regras de tratamento de imagem</h3>
+                    <ul>
+                        <li>
+                            Temperatura de cor: cool (ligeiro desvio para azul)
+                        </li>
+                        <li>Saturação: -10 a -20% em relação ao original</li>
+                        <li>Contrastes médio-altos, com detalhe nas sombras</li>
+                        <li>
+                            Sem vinhetas pesadas — usar gradientes sutis de
+                            overlay
+                        </li>
+                        <li>
+                            Textura: opcional noise sutil (max 2%) para coesão
+                            em fundos escuros
+                        </li>
+                        <li>
+                            Formato de exportação: WebP primário, JPG fallback,
+                            80–85% qualidade
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin-top: 40px">
+                <div class="section-header" style="margin-bottom: 20px">
+                    <h2 style="font-size: 20px">
+                        <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                            style="vertical-align: middle; margin-right: 8px; color: var(--red);"
+                        >
+                            <path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z" />
+                            <circle cx="12" cy="13" r="4" />
+                        </svg>
+                        Regras de Captação de Imagem
+                    </h2>
+                    <p>
+                        Guia rápido para colaboradores que capturem fotos de
+                        processos, produtos ou instalações.
+                    </p>
+                </div>
+                <div class="rules-grid">
+                    <div class="rule-card">
+                        <h3>
+                            <span class="icon icon-good">✓</span>Enquadramento
+                            completo
+                        </h3>
+                        <p
+                            style="
+                                font-size: 13px;
+                                color: var(--text-muted);
+                                line-height: 1.6;
+                            "
+                        >
+                            Evite cortar o produto ou o tema principal. Deixe
+                            margem em volta do sujeito — é sempre possível
+                            recortar depois, mas não recuperar o que ficou de
+                            fora.
+                        </p>
+                    </div>
+                    <div class="rule-card">
+                        <h3>
+                            <span class="icon icon-good">✓</span>Atenção ao
+                            contexto
+                        </h3>
+                        <p
+                            style="
+                                font-size: 13px;
+                                color: var(--text-muted);
+                                line-height: 1.6;
+                            "
+                        >
+                            Verifique o que rodeia o sujeito: objetos
+                            pessoais, lixo, cabos desarrumados, marcas de
+                            outros fabricantes ou pessoas não autorizadas. O
+                            fundo conta tanto quanto o primeiro plano.
+                        </p>
+                    </div>
+                    <div class="rule-card">
+                        <h3>
+                            <span class="icon icon-good">✓</span>Iluminação
+                            equilibrada
+                        </h3>
+                        <p
+                            style="
+                                font-size: 13px;
+                                color: var(--text-muted);
+                                line-height: 1.6;
+                            "
+                        >
+                            Prefira luz natural ou iluminação ambiente
+                            uniforme. Evite sombras duras, reflexos cegos em
+                            superfícies metálicas ou vidro, e zonas
+                            sobrexpostas (brancos queimados).
+                        </p>
+                    </div>
+                    <div class="rule-card">
+                        <h3>
+                            <span class="icon icon-bad">✕</span>Distância e
+                            distorção
+                        </h3>
+                        <p
+                            style="
+                                font-size: 13px;
+                                color: var(--text-muted);
+                                line-height: 1.6;
+                            "
+                        >
+                            Não aproxime o telemóvel demasiado — causa
+                            distorção de perspetiva (efeito "wide-angle")
+                            que deforma as proporções. Mantenha distância
+                            razoável e use zoom digital com moderação.
+                        </p>
+                    </div>
+                    <div class="rule-card">
+                        <h3>
+                            <span class="icon icon-bad">✕</span>Flash direto
+                        </h3>
+                        <p
+                            style="
+                                font-size: 13px;
+                                color: var(--text-muted);
+                                line-height: 1.6;
+                            "
+                        >
+                            Evite o flash do telemóvel em componentes
+                            eletrónicos, ecrãs e superfícies refletoras. Cria
+                            hotspots, apaga detalhes e dá um aspeto
+                            amador. Procure mais luz ambiente ou
+                            reposicione-se.
+                        </p>
+                    </div>
+                    <div class="rule-card">
+                        <h3>
+                            <span class="icon icon-bad">✕</span>Orientação
+                            inconsistente
+                        </h3>
+                        <p
+                            style="
+                                font-size: 13px;
+                                color: var(--text-muted);
+                                line-height: 1.6;
+                            "
+                        >
+                            Capture sempre na orientação correta: horizontal
+                            para produtos e ambientes, vertical apenas para
+                            detalhes estreitos ou Stories. Verifique a
+                            horizontalidade — linhas tortas denotam
+                            desleixo.
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    style="
+                        margin-top: 24px;
+                        background: var(--teal-deep);
+                        color: var(--white);
+                        border-radius: 10px;
+                        padding: 22px;
+                        display: flex;
+                        align-items: flex-start;
+                        gap: 14px;
+                    "
+                >
+                    <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#8FE0FF"
+                        stroke-width="2.5"
+                        style="flex-shrink: 0; margin-top: 2px"
+                    >
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="12" y1="16" x2="12" y2="12" />
+                        <line x1="12" y1="8" x2="12.01" y2="8" />
+                    </svg>
+                    <div>
+                        <strong
+                            style="
+                                color: var(--teal-light);
+                                font-size: 14px;
+                                display: block;
+                                        overflow: visible;
+                                margin-bottom: 6px;
+                            "
+                            >Lembrete antes de partilhar</strong
+                        >
+                        <p
+                            style="
+                                font-size: 13px;
+                                color: rgba(255, 255, 255, 0.85);
+                                line-height: 1.6;
+                                margin: 0;
+                            "
+                        >
+                            Reveja a imagem no ecrã antes de enviar. Confirme
+                            que não há dados confidenciais visíveis (ecrãs com
+                            informação, documentos, IPs), que a imagem está
+                            focada e que representa fielmente o trabalho da
+                            EDMTECH. Quando em dúvida, consulte a equipa de
+                            design.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Typography -->
+        <footer class="footer">
+            <p>
+                Diretrizes de Marca EDMTECH — Abril 2026<br />Em caso de dúvida,
+                contacte a equipa de design.
+            </p>
+        </footer>
+
+        <script>
+            function copyColor(card) {
+                const color = card.getAttribute("data-color");
+                navigator.clipboard.writeText(color).then(() => {
+                    const codeEl = card.querySelector(".color-code");
+                    const original = codeEl.textContent;
+                    codeEl.textContent = "Copiado!";
+                    codeEl.classList.add("copied");
+                    showToast(color + " copiado");
+                    setTimeout(() => {
+                        codeEl.textContent = original;
+                        codeEl.classList.remove("copied");
+                    }, 2000);
+                });
+            }
+
+            function showToast(msg) {
+                const toast = document.getElementById("toast");
+                toast.textContent = msg;
+                toast.classList.add("show");
+                setTimeout(() => toast.classList.remove("show"), 2500);
+            }
+
+            // Highlight active nav link on scroll
+            const navLinks = document.querySelectorAll('.nav-links a');
+            const sections = document.querySelectorAll('section[id]');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '-80px 0px -60% 0px',
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => link.classList.remove('active'));
+                        const id = entry.target.getAttribute('id');
+                        const activeLink = document.querySelector(`.nav-links a[href="#${id}"]`);
+                        if (activeLink) activeLink.classList.add('active');
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => observer.observe(section));
+        </script>
+    </body>
+</html>
