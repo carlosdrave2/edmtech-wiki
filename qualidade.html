@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt" data-page="qualidade">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>EDMTECH Wiki — Qualidade (ISO 9001)</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+        <style>
+            :root {
+                --red: #e74f3d; --teal: #34bee9; --teal-dark: #197799; --teal-deep: #014354; --teal-light: #8fe0ff;
+                --white: #ffffff; --gray-100: #f8f9fa; --gray-200: #e9ecef; --gray-300: #9d9d9d; --gray-400: #4d4d4d; --gray-500: #171717; --black: #0b0e15;
+                --bg-page: #fafbfc; --bg-card: #ffffff; --text-main: #1a1d23; --text-muted: #5f6977; --border: #e5e7eb;
+            }
+            * { margin: 0; padding: 0; box-sizing: border-box; }
+            html { scroll-behavior: smooth; }
+            body { font-family: "Sora", sans-serif; background: var(--bg-page); color: var(--text-main); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+            .wiki-main { margin-left: 260px; display: flex; justify-content: center; min-height: 100vh; padding: 32px 24px 80px; gap: 32px; }
+            .wiki-content-wrap { flex: 1; min-width: 0; max-width: 860px; }
+            .placeholder-section { padding: 48px 0; }
+            .placeholder-icon { width: 64px; height: 64px; border-radius: 16px; background: rgba(52,190,233,0.1); color: var(--teal); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+            .placeholder-section h1 { font-size: 28px; font-weight: 700; color: var(--text-main); margin-bottom: 8px; }
+            .placeholder-section p { font-size: 15px; color: var(--text-muted); line-height: 1.7; max-width: 520px; }
+            .placeholder-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 24px; margin-top: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+            .placeholder-card h3 { font-size: 14px; font-weight: 600; color: var(--text-main); margin-bottom: 8px; }
+            .placeholder-card p { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+            .badge-soon { display: inline-block; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 4px; background: rgba(238,106,48,0.12); color: var(--red); text-transform: uppercase; letter-spacing: 0.06em; }
+        </style>
+    </head>
+    <body>
+        <main class="wiki-main">
+            <div class="wiki-content-wrap">
+                <div class="placeholder-section">
+                    <div class="placeholder-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                    </div>
+                    <h1>Qualidade (ISO 9001)</h1>
+                    <p>Sistema de gestão da qualidade, processos e documentação conforme ISO 9001.</p>
+                    <span class="badge-soon">Em breve</span>
+                    <div class="placeholder-card">
+                        <h3>Conteúdo previsto</h3>
+                        <p>Política da qualidade, manual de qualidade, procedimentos documentados, registos de auditoria interna, gestão de não-conformidades, e indicadores de desempenho (KPIs).</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="wiki-nav.js"></script>
+    </body>
+</html>
